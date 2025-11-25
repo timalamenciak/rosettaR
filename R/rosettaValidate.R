@@ -1,0 +1,3 @@
+rosettaValidate <- function (statement, template) {
+
+}
