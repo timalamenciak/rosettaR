@@ -8,17 +8,9 @@ rosettaFormat <- function(s, t, f = "df") {
   var_names <- regmatches(t, gregexpr(var_pattern, t, perl = TRUE))[[1]]
   var_names <- gsub("\\{\\{\\s*|\\s*\\}\\}", "", var_names)
 
-  # Escape special regex characters in the template
   regex_pattern <- t
-  # First, temporarily replace {{ }} placeholders
-  regex_pattern <- gsub("\\{\\{\\s*[^}]+?\\s*\\}\\}", "<<<PLACEHOLDER>>>", regex_pattern)
-  # Escape all special regex characters
-  regex_pattern <- gsub("([.\\\\+*?\\[\\]^$(){}|])", "\\\\\\1", regex_pattern)
-  # Replace placeholders with capture groups
-  regex_pattern <- gsub("<<<PLACEHOLDER>>>", "(.*?)", regex_pattern)
-
   # Replace {{ var }} with capture groups
-  regex_pattern <- gsub("\\{\\{\\s*[^}]+?\\s*\\}\\}", "(.*?)", regex_pattern)
+  regex_pattern <- gsub("\\{\\{\\s*[^}]+?\\s*\\}\\}", "(.*)", regex_pattern)
 
   # Extract values from the input string
   matches <- regmatches(s, regexec(regex_pattern, s, perl = TRUE))[[1]]
