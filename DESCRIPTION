@@ -1,16 +1,26 @@
-Package: RosettaR
+Package: rosettaR
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
+Title: Turn Plain Language Statements Into RDF, CSV, or Anything
+Version: 0.0.1
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Tim", "Alamenciak",
+      email = "tim.alamenciak@gmail.com",
       role = c("aut", "cre")
+    ),person(
+      "Tarek", "Al Mustafa",
+      email = "tarek.almustafa@uni-jena.de",
+      role = c("aut")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: Core functions to work with Rosetta Statements, which use
+  templates to convert plain language strings into RDF, CSV or other
+  representations. This package is designed to make the creation of knowledge
+  graphs easier.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports: 
+    stats

@@ -1,0 +1,4 @@
+﻿id,templateText,metaTemplateID
+1,documented in {{ study.doi }} which takes place at {{ study.coords }}.,
+2,{{ restoration.process }} applied in {{ ecosystem.type }} is {{ association }} {{ environmental.variable }},1
+3,{{ restoration.process }} applied in {{ ecosystem.type }} is {{ association }} {{ attribute }} {{ taxon }},1

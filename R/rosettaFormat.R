@@ -1,7 +1,16 @@
-#testing template:
-test <- "{{ pet }} is not sold in {{ city }}"
-train <- "Dog is not sold in kitchener"
-
+#' Change the format of a statement
+#'
+#' @param s A statement in the form of a string.
+#' @param t A Rosetta Template to interpret the string.
+#' @param f The desired output format. Currently "df" works.
+#'
+#' @returns A variable in the desired output format. Generally a dataframe.
+#' @export
+#'
+#' @examples
+#' statement <- "Kitchener is located in Canada"
+#' template <- "{{ city }} is located in {{ country }}"
+#' df <- rosettaFormat(statement, template, "df")
 rosettaFormat <- function(s, t, f = "df") {
   # Extract variable names from template (everything between {{ }})
   var_pattern <- "\\{\\{\\s*([^}]+?)\\s*\\}\\}"
@@ -36,7 +45,7 @@ rosettaFormat <- function(s, t, f = "df") {
     return(result)
   } else if (f == "vector") {
     # Return as named vector
-    result <- setNames(values, var_names)
+    result <- stats::setNames(values, var_names)
     return(result)
   } else {
     stop("Invalid format. Use 'df', 'list', or 'vector'")

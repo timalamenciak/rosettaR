@@ -1,0 +1,965 @@
+uid_number,from,to,type,knowledgeLevel,ecosystemContext,reportedIn,taxonAttribute,conditions,Notes
+1001,101,102,DESCRIBES_OUTCOME_OF,,Annual croplands,10.1111/rec.12987,,,article to process
+1002,102,103,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,,,seeding to floral abundance 
+1005,102,105,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,,,seeding porcess to species ricness 
+1006,102,106,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,seeding to taxon 
+1007,102,107,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1008,102,108,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1009,102,109,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1010,102,110,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1011,102,111,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1012,102,112,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1013,102,113,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1014,102,114,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1015,102,115,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1016,102,116,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1017,102,117,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1018,102,118,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1019,102,119,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1020,102,120,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1021,102,121,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1022,102,122,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1023,102,123,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1024,102,124,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1025,102,125,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1026,102,126,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1027,102,127,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1028,102,128,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1029,102,129,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1030,102,130,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1031,102,131,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1032,102,132,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1033,102,133,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1034,102,134,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1035,102,135,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1036,102,136,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1037,102,137,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1038,102,138,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1039,102,139,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1040,102,140,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1041,102,141,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1042,102,142,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1043,102,143,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1044,102,144,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1045,102,145,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1046,102,146,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1047,102,147,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1048,102,148,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1049,102,149,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1050,102,150,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1051,102,151,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1052,102,152,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1053,102,153,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1054,102,154,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1055,102,155,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1056,102,156,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1057,102,157,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1058,102,158,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1059,102,159,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1060,102,160,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1061,102,161,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1062,102,162,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1063,102,163,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1064,102,164,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1065,102,165,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1066,102,166,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1067,102,167,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1068,102,168,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1069,102,169,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1070,102,170,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1071,102,171,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1072,102,172,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1073,102,173,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1074,102,174,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1075,102,175,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1076,102,176,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1077,102,177,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1078,102,178,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1079,102,179,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1080,102,180,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1081,102,181,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1082,102,182,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1083,102,183,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1084,102,184,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1085,102,185,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1086,102,186,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1087,102,187,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1088,102,188,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1089,102,189,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1090,102,190,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1091,102,191,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1092,102,192,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1093,102,193,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1094,102,194,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1095,102,195,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1096,102,196,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1097,102,197,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1098,102,198,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1099,102,199,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1100,102,200,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1101,102,201,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1102,102,202,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1103,102,203,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1104,102,204,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1105,102,205,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1106,102,206,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1107,102,207,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1108,102,208,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1109,102,209,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1110,102,210,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1111,102,211,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1112,102,212,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1113,102,213,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1114,102,214,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1115,102,215,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1116,102,216,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1117,102,217,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1118,102,218,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1119,102,219,POSITIVELY_ASSOCIATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,Last seeding process to bee species
+1120,106,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,bee species to floral abundance 
+1121,107,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1122,108,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1123,109,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1124,110,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1125,111,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1126,112,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1127,113,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1128,114,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1129,115,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1130,116,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1131,117,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1132,118,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1133,119,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1134,120,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1135,121,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1136,122,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1137,123,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1138,124,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1139,125,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1140,126,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1141,127,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1142,128,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1143,129,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1144,130,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1145,131,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1146,132,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1147,133,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1148,134,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1149,135,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1150,136,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1151,137,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1152,138,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1153,139,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1154,140,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1155,141,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1156,142,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1157,143,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1158,144,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1159,145,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1160,146,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1161,147,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1162,148,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1163,149,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1164,150,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1165,151,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1166,152,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1167,153,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1168,154,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1169,155,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1170,156,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1171,157,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1172,158,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1173,159,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1174,160,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1175,161,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1176,162,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1177,163,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1178,164,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1179,165,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1180,166,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1181,167,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1182,168,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1183,169,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1184,170,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1185,171,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1186,172,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1187,173,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1188,174,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1189,175,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1190,176,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1191,177,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1192,178,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1193,179,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1194,180,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1195,181,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1196,182,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1197,183,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1198,184,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1199,185,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1200,186,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1201,187,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1202,188,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1203,189,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1204,190,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1205,191,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1206,192,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1207,193,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1208,194,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1209,195,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1210,196,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1211,197,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1212,198,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1213,199,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1214,200,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1215,201,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1216,202,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1217,203,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1218,204,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1219,205,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1220,206,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1221,207,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1222,208,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1223,209,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1224,210,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1225,211,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1226,212,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1227,213,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1228,214,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1229,215,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1230,216,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1231,217,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1232,218,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1233,219,103,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,last taxon to floral abundance 
+1234,106,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,taxon to nesting ressource 
+1235,107,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1236,108,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1237,109,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1238,110,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1239,111,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1240,112,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1241,113,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1242,114,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1243,115,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1244,116,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1245,117,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1246,118,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1247,119,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1248,120,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1249,121,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1250,122,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1251,123,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1252,124,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1253,125,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1254,126,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1255,127,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1256,128,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1257,129,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1258,130,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1259,131,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1260,132,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1261,133,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1262,134,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1263,135,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1264,136,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1265,137,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1266,138,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1267,139,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1268,140,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1269,141,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1270,142,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1271,143,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1272,144,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1273,145,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1274,146,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1275,147,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1276,148,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1277,149,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1278,150,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1279,151,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1280,152,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1281,153,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1282,154,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1283,155,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1284,156,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1285,157,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1286,158,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1287,159,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1288,160,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1289,161,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1290,162,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1291,163,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1292,164,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1293,165,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1294,166,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1295,167,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1296,168,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1297,169,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1298,170,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1299,171,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1300,172,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1301,173,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1302,174,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1303,175,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1304,176,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1305,177,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1306,178,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1307,179,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1308,180,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1309,181,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1310,182,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1311,183,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1312,184,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1313,185,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1314,186,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1315,187,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1316,188,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1317,189,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1318,190,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1319,191,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1320,192,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1321,193,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1322,194,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1323,195,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1324,196,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1325,197,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1326,198,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1327,199,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1328,200,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1329,201,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1330,202,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1331,203,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1332,204,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1333,205,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1334,206,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1335,207,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1336,208,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1337,209,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1338,210,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1339,211,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1340,212,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1341,213,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1342,214,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1343,215,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1344,216,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1345,217,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1346,218,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,""""
+1347,219,104,POSITIVELY_CORRELATED_WITH,observation,Annual croplands,10.1111/rec.12987,Abundance,,Last taxon to nesting 
+1348,220,221,DESCRIBES_OUTCOME_OF,,Sown pastures and fields,10.1016/j.rama.2019.07.003,,,Article to process
+1349,221,223,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,,,process to environmental variable 
+1350,221,224,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,,,""""
+1351,221,226,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,,,""""
+1352,221,229,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,,,""""
+1353,221,230,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,,,""""
+1354,221,231,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,,,""""
+1355,221,222,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,,,""""
+1356,221,228,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,,,""""
+1357,221,235,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,Process to percent cover taxon
+1358,221,237,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,""""
+1359,221,241,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,""""
+1360,221,232,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,""""
+1361,221,238,POSITIVELY_ASSOCIATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,Vigor,,Process to vigor taxon
+1362,237,232,INVERSELY_CORRELATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,Taxon Compeition relationships 
+1363,237,235,INVERSELY_CORRELATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,""""
+1364,224,235,POSITIVELY_CORRELATED_WITH,statistical_association,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,litter cover and kentucky bluegrass
+1365,221,232,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1366,221,233,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1367,221,234,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1368,221,235,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1369,221,236,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1370,221,237,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1371,221,238,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1372,221,239,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1373,221,240,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1374,221,241,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1375,221,242,POSITIVELY_CORRELATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Aboveground Biomass,,
+1376,221,233,POSITIVELY_ASSOCIATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,
+1377,221,234,POSITIVELY_ASSOCIATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,
+1378,221,236,POSITIVELY_ASSOCIATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,
+1379,221,239,POSITIVELY_ASSOCIATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,
+1380,221,240,POSITIVELY_ASSOCIATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,
+1381,221,242,POSITIVELY_ASSOCIATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,
+1382,221,243,POSITIVELY_ASSOCIATED_WITH,observation,Sown pastures and fields,10.1016/j.rama.2019.07.003,Percent Cover ,,
+1383,255,256,DESCRIBES_OUTCOME_OF,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1384,255,257,DESCRIBES_OUTCOME_OF,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1385,255,258,DESCRIBES_OUTCOME_OF,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1386,256,224,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1387,257,224,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1388,258,224,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1389,256,261,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1390,257,261,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1391,258,261,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1392,256,264,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1393,257,264,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1394,258,264,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1395,264,261,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1396,262,256,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1397,262,257,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1398,262,258,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,,,
+1399,257,267,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1400,258,266,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1401,258,257,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1402,257,267,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1403,257,268,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1404,257,233,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1405,257,270,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1406,256,266,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1407,256,267,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1408,256,268,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1409,256,233,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1410,256,270,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1411,256,271,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1412,256,272,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1413,256,273,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1414,256,274,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1415,256,275,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1416,256,276,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1417,256,277,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1418,256,278,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1419,256,279,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1420,256,280,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1421,256,281,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1422,256,282,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1423,256,283,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1424,257,266,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1425,257,263,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1007/s10531-017-1456-z,Abundance ,,
+1426,284,285,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,"Article 284, Article decribes outcome of seeding process on different topographic microsites, and amendments"
+1427,284,102,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1428,284,286,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1429,284,287,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1430,284,288,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1431,284,289,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1432,284,290,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1433,284,291,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1434,284,292,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1435,284,293,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1436,284,294,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1437,284,295,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1438,284,296,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1439,284,297,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1440,284,298,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1441,284,299,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1442,284,300,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1443,284,301,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1444,284,302,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1445,303,285,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1446,303,286,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1447,303,287,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1448,303,288,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1449,303,289,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1450,303,290,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1451,303,291,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1452,303,292,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1453,303,293,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1454,303,294,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1455,303,295,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1456,303,296,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1457,304,297,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1458,304,298,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1459,304,299,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1460,304,300,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1461,304,301,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1462,304,302,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1463,305,285,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1464,305,291,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1465,305,290,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1466,305,296,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1467,305,302,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1468,305,287,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1469,305,293,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1470,305,299,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1471,306,285,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1472,306,289,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1473,306,295,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1474,306,301,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1475,306,288,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1476,306,294,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1477,306,300,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1478,307,291,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1479,307,292,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1480,307,293,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1481,307,294,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1482,307,295,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1483,307,296,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1484,307,287,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1485,307,299,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1486,307,290,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1487,307,302,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1488,308,285,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1489,308,290,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1490,308,287,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1491,308,302,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1492,309,291,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1493,309,292,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1494,309,293,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1495,309,294,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1496,309,295,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1497,309,296,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1498,309,310,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1499,311,291,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1500,311,292,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1501,311,293,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1502,311,294,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1503,311,295,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1504,311,296,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1505,312,291,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1506,312,292,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1507,312,293,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1508,312,294,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1509,312,295,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1510,312,296,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1511,312,300,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1512,312,301,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,,,
+1513,289,232,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1514,295,232,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1515,301,232,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1516,287,232,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1517,293,232,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1518,102,290,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1519,102,267,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1520,102,314,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1521,102,232,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1522,102,233,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1523,102,317,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1524,102,318,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1525,102,319,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1526,299,232,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2017.08.004,Emergents Percent Cover,,
+1527,320,102,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,,,,Article 320
+1528,102,105,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,,,
+1529,102,325,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1530,,326,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1531,,116,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1532,,117,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1533,,329,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1534,,330,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1535,,118,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1536,,332,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1537,,333,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1538,,334,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1539,,335,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1540,,336,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1541,,337,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1542,,338,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1543,,126,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1544,,340,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1545,,127,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1546,,342,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1547,,343,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1548,,128,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1549,,345,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1550,,346,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1551,,347,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1552,,134,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1553,,135,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1554,,139,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1555,,351,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1556,,352,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1557,,193,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1558,,197,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1559,,355,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1560,,198,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1561,,357,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1562,,358,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1563,,359,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1564,,360,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1565,,361,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1566,,362,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1567,,363,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1568,,219,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1569,,365,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1570,,366,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1571,,367,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1572,,368,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1573,,369,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1574,,110,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1575,,111,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1576,,108,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1577,,106,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1578,,107,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1579,,145,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1580,,376,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1581,,377,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1582,,378,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1583,,159,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1584,,161,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1585,,381,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1586,,382,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1587,,383,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1588,,167,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1589,,385,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1590,,386,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1591,,170,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1592,,173,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1593,,389,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1594,,178,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1595,,391,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1596,,392,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1597,,393,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1598,,183,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1599,,395,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1600,,396,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1601,,397,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1602,,158,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1603,,399,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1604,,400,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1605,,401,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1606,,213,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1607,,403,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1608,,125,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1609,,405,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1610,,406,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1611,,407,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1612,,408,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1613,,409,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1614,,410,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1615,,411,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1616,,147,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1617,,413,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1618,,414,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1619,,415,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1620,,187,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1621,,417,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1622,,418,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1623,,419,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1624,,188,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1625,,189,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1626,,422,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1627,,423,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1628,,424,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1629,,425,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1630,,204,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1631,,427,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1632,,428,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1633,,208,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1634,,430,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1635,,431,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,Abudance ,3-4  years after restoration,
+1636,102,222,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/icad.12261,,3-4  years after restoration,
+1637,432,433,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1111/avsc.12316,,,Article 432
+1638,432,434,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1111/avsc.12316,,,
+1639,432,435,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1111/avsc.12316,,,
+1640,435,436,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/avsc.12316,,,
+1641,435,439,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/avsc.12316,,,
+1642,433,439,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/avsc.12316,,,
+1643,434,439,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/avsc.12316,,,
+1644,433,438,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/avsc.12316,,,
+1645,435,441,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/avsc.12316,,,
+1646,435,442,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/avsc.12316,,,
+1647,435,438,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/avsc.12316,,,
+1648,450,102,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1111/1365-2664.12886,,,
+1649,102,457,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1650,102,458,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1651,102,459,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1652,102,460,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1653,102,461,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1654,102,462,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1655,102,463,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1656,102,464,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1657,102,465,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1658,102,466,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1659,102,467,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1660,102,468,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1661,102,469,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1662,102,470,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1663,102,471,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1664,102,472,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,,
+1665,454,444,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,August and September ,
+1666,454,476,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,August and September ,
+1667,454,477,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,August and September ,
+1668,454,457,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1669,454,458,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1670,454,459,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1671,454,460,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1672,454,461,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1673,454,462,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1674,454,463,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1675,454,464,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1676,454,465,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1677,454,466,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1678,454,467,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1679,454,468,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1680,454,469,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1681,454,470,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1682,454,471,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1683,454,472,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,Seed Abundance ,October-July ,
+1684,102,105,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/1365-2664.12886,,,
+1685,478,102,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1111/rec.12468,,,
+1686,478,479,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1111/rec.12468,,,
+1687,478,480,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1111/rec.12468,,,
+1688,478,481,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1111/rec.12468,,,
+1689,105,276,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1690,105,489,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1691,105,490,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1692,105,491,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1693,105,492,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1694,105,493,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1695,105,494,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1696,105,495,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1697,105,483,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,,,
+1698,480,276,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1699,480,489,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1700,480,490,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1701,480,491,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1702,480,492,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1703,480,493,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1704,480,494,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1705,480,495,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1706,480,487,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,,,
+1707,479,491,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1708,479,276,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1709,479,495,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1710,480,492,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1711,480,485,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1712,487,485,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1713,492,479,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1714,492,481,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1715,494,484,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1716,494,486,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1717,492,485,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1718,491,485,POSITIVELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12468,Percent Cover,,
+1719,496,497,DESCRIBES_OUTCOME_OF,,Temperate subhumid grasslands,10.1016/j.rama.2016.10.008,,,
+1720,235,266,INVERSELY_CORRELATED_WITH,statistical_association,Temperate subhumid grasslands,10.1016/j.rama.2016.10.008,Abundance ,,
+1721,497,235,NEGATIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2016.10.008,Abundance ,Over 6 Years,
+1722,497,266,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2016.10.008,Abundance ,,
+1723,497,498,POSITIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2016.10.008,,,
+1724,235,224,POSITIVELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2016.10.008,Abundance,,
+1725,266,224,INVERSELY_CORRELATED_WITH,observation,Temperate subhumid grasslands,10.1016/j.rama.2016.10.008,Abundance,,
+1726,502,221,,,Temperate subhumid grasslands,10.1111/rec.12156,,,
+1727,221,506,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,,2nd and 3rd year after seeding,
+1728,221,531,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1729,221,532,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1730,221,477,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1731,221,534,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1732,221,535,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1733,221,536,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1734,221,537,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1735,221,477,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,1st year after seeding,
+1736,221,477,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,2nd and 3rd year after seeding,
+1737,221,532,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1738,221,472,NEGATIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1739,221,539,NEGATIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1740,221,461,NEGATIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1741,221,541,NEGATIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover ,,
+1742,221,222,NEGATIVELY_ASSOCIATED_WITH,observation,Temperate subhumid grasslands,10.1111/rec.12156,,,
+1743,221,522,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover,,
+1744,221,457,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover,,
+1745,221,524,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover,,
+1746,221,527,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12156,Percent Cover,,
+1747,221,530,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12157,Percent Cover,,
+1748,221,449,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12158,,,
+1749,221,267,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12159,Percent Cover ,,
+1750,221,459,POSITIVELY_ASSOCIATED_WITH,statistical_association,Temperate subhumid grasslands,10.1111/rec.12160,Percent Cover,,
+1751,550,551,DESCRIBES_OUTCOME_OF,,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1752,550,552,DESCRIBES_OUTCOME_OF,,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1753,550,553,DESCRIBES_OUTCOME_OF,,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1754,550,554,DESCRIBES_OUTCOME_OF,,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1755,550,555,DESCRIBES_OUTCOME_OF,,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1756,550,556,DESCRIBES_OUTCOME_OF,,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1757,550,557,DESCRIBES_OUTCOME_OF,,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1758,550,558,DESCRIBES_OUTCOME_OF,,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1759,550,559,DESCRIBES_OUTCOME_OF,,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1760,550,560,DESCRIBES_OUTCOME_OF,,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1761,555,568,POSITIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,,
+1762,560,568,POSITIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,,
+1763,552,568,POSITIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Biomass,,
+1764,556,223,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1765,556,262,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1766,557,223,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1767,557,262,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1768,552,568,POSITIVELY_ASSOCIATED_WITH,observation,Permanent marshes,10.1016/j.jenvman.2014.03.003,Biomass,,
+1769,555,568,POSITIVELY_ASSOCIATED_WITH,observation,Permanent marshes,10.1016/j.jenvman.2014.03.003,Biomass,,
+1770,551,568,POSITIVELY_ASSOCIATED_WITH,observation,Permanent marshes,10.1016/j.jenvman.2014.03.003,Biomass,,
+1771,553,563,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Biomass,,
+1772,560,223,POSITIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1773,556,562,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1774,557,562,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1775,558,562,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1776,559,562,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1777,560,562,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1778,551,563,POSITIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,Initial,
+1779,552,563,POSITIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,Initial,
+1780,556,563,POSITIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,Initial,
+1781,557,563,POSITIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,Initial,
+1782,556,563,POSITIVELY_ASSOCIATED_WITH,observation,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1783,557,563,POSITIVELY_ASSOCIATED_WITH,observation,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1784,558,563,POSITIVELY_ASSOCIATED_WITH,observation,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1785,559,563,POSITIVELY_ASSOCIATED_WITH,observation,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1786,560,563,POSITIVELY_ASSOCIATED_WITH,observation,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1787,551,556,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1788,552,556,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1789,556,556,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1790,557,556,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1791,551,566,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1792,552,566,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1793,556,566,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1794,557,566,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1795,551,567,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1796,552,567,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1797,556,567,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1798,557,567,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1799,551,564,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1800,552,564,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1801,556,564,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1802,557,564,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,,,
+1803,556,568,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,Initial,
+1804,557,568,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,Initial,
+1805,551,568,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,,
+1806,552,568,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,,
+1807,553,568,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,,
+1808,554,568,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,,
+1809,556,568,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,,
+1810,557,568,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,,
+1811,558,568,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,,
+1812,559,568,NEGATIVELY_ASSOCIATED_WITH,statistical_association,Permanent marshes,10.1016/j.jenvman.2014.03.003,Survival,,
+1813,,,,,,,,,
+1814,,,,,,,,,
+1815,,,,,,,,,
+1816,,,,,,,,,
+1817,,,,,,,,,
+1818,,,,,,,,,
+1819,,,,,,,,,
+1820,,,,,,,,,
+1821,,,,,,,,,
+1822,,,,,,,,,
+1823,,,,,,,,,
+1824,,,,,,,,,
+1825,,,,,,,,,
+1826,,,,,,,,,
+1827,,,,,,,,,
+1828,,,,,,,,,
+1829,,,,,,,,,
+1830,,,,,,,,,
+1831,,,,,,,,,
+1832,,,,,,,,,
+1833,,,,,,,,,
+1834,,,,,,,,,
+1835,,,,,,,,,
+1836,,,,,,,,,
+1837,,,,,,,,,
+1838,,,,,,,,,
+1839,,,,,,,,,
+1840,,,,,,,,,
+1841,,,,,,,,,
+1842,,,,,,,,,
+1843,,,,,,,,,
+1844,,,,,,,,,
+1845,,,,,,,,,
+1846,,,,,,,,,
+1847,,,,,,,,,
+1848,,,,,,,,,
+1849,,,,,,,,,
+1850,,,,,,,,,
+1851,,,,,,,,,
+1852,,,,,,,,,
+1853,,,,,,,,,
+1854,,,,,,,,,
+1855,,,,,,,,,
+1856,,,,,,,,,
+1857,,,,,,,,,
+1858,,,,,,,,,
+1859,,,,,,,,,
+1860,,,,,,,,,
+1861,,,,,,,,,
+1862,,,,,,,,,
+1863,,,,,,,,,
+1864,,,,,,,,,
+1865,,,,,,,,,
+1866,,,,,,,,,
+1867,,,,,,,,,
+1868,,,,,,,,,
+1869,,,,,,,,,
+1870,,,,,,,,,
+1871,,,,,,,,,
+1872,,,,,,,,,
+1873,,,,,,,,,
+1874,,,,,,,,,
+1875,,,,,,,,,
+1876,,,,,,,,,
+1877,,,,,,,,,
+1878,,,,,,,,,
+1879,,,,,,,,,
+1880,,,,,,,,,
+1881,,,,,,,,,
+1882,,,,,,,,,
+1883,,,,,,,,,
+1884,,,,,,,,,
+1885,,,,,,,,,
+1886,,,,,,,,,
+1887,,,,,,,,,
+1888,,,,,,,,,
+1889,,,,,,,,,
+1890,,,,,,,,,
+1891,,,,,,,,,
+1892,,,,,,,,,
+1893,,,,,,,,,
+1894,,,,,,,,,
+1895,,,,,,,,,
+1896,,,,,,,,,
+1897,,,,,,,,,
+1898,,,,,,,,,
+1899,,,,,,,,,
+1900,,,,,,,,,
+1901,,,,,,,,,
+1902,,,,,,,,,
+1903,,,,,,,,,
+1904,,,,,,,,,
+1905,,,,,,,,,
+1906,,,,,,,,,
+1907,,,,,,,,,
+1908,,,,,,,,,
+1909,,,,,,,,,
+1910,,,,,,,,,
+1911,,,,,,,,,
+1912,,,,,,,,,
+1913,,,,,,,,,
+1914,,,,,,,,,
+1915,,,,,,,,,
+1916,,,,,,,,,
+1917,,,,,,,,,
+1918,,,,,,,,,
+1919,,,,,,,,,
+1920,,,,,,,,,
+1921,,,,,,,,,
+1922,,,,,,,,,
+1923,,,,,,,,,
+1924,,,,,,,,,
+1925,,,,,,,,,
+1926,,,,,,,,,
+1927,,,,,,,,,
+1928,,,,,,,,,
+1929,,,,,,,,,
+1930,,,,,,,,,
+1931,,,,,,,,,
+1932,,,,,,,,,
+1933,,,,,,,,,
+1934,,,,,,,,,
+1935,,,,,,,,,
+1936,,,,,,,,,
+1937,,,,,,,,,
+1938,,,,,,,,,
+1939,,,,,,,,,
+1940,,,,,,,,,
+1941,,,,,,,,,
+1942,,,,,,,,,
+1943,,,,,,,,,
+1944,,,,,,,,,
+1945,,,,,,,,,
+1946,,,,,,,,,
+1947,,,,,,,,,
+1948,,,,,,,,,
+1949,,,,,,,,,
+1950,,,,,,,,,
+1951,,,,,,,,,
+1952,,,,,,,,,
+1953,,,,,,,,,
+1954,,,,,,,,,
+1955,,,,,,,,,
+1956,,,,,,,,,
+1957,,,,,,,,,
+1958,,,,,,,,,
+1959,,,,,,,,,
+1960,,,,,,,,,
+1961,,,,,,,,,
+1962,,,,,,,,,
+1963,,,,,,,,,
+1964,,,,,,,,,
+1965,,,,,,,,,
+1966,,,,,,,,,
