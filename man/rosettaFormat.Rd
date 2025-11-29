@@ -4,23 +4,24 @@
 \alias{rosettaFormat}
 \title{Change the format of a statement}
 \usage{
-rosettaFormat(s, t, f = "df")
+rosettaFormat(s, in_template, out_template)
 }
 \arguments{
 \item{s}{A statement in the form of a string.}
 
-\item{t}{A Rosetta Template to interpret the string.}
+\item{in_template}{A Rosetta Template to interpret the string.}
 
-\item{f}{The desired output format. Currently "df" works.}
+\item{out_template}{A Jinja template for the desired output.}
 }
 \value{
-A variable in the desired output format. Generally a dataframe.
+A string rendered from the Jinja output template and the Rosetta input template.
 }
 \description{
 Change the format of a statement
 }
 \examples{
 statement <- "Kitchener is located in Canada"
-template <- "{{ city }} is located in {{ country }}"
-df <- rosettaFormat(statement, template, "df")
+in_template <- "{{ city }} is located in {{ country }}"
+out_template <- "CITY,COUNTRY,,{{ city }},{{ country }}"
+df <- rosettaFormat(statement, in_template, out_template)
 }

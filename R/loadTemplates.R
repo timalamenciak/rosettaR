@@ -6,9 +6,14 @@
 #' @export
 #'
 #' @examples
-#' templates <- loadTemplates("data/templates.csv")
+#' t_file <- data.frame("id" = 1,
+#'                     "templateText" = "{{ city }} is in {{ country }},
+#'                     "metaTemplateID" = 2)
+#' tf <- tempfile()
+#' writeLines(t_file, tf)
+#' templates <- loadTemplates(tf)
 loadTemplates <- function(file) {
-  templates <- read.csv(file)
+  templates <- utils::read.csv(file)
   #Verify the format:
   #Required columns:
   # id
