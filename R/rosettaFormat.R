@@ -2,7 +2,8 @@
 #'
 #' @param s A statement in the form of a string.
 #' @param in_template A Rosetta Template to interpret the string.
-#' @param out_template A Jinja template for the desired output.
+#' @param out_template A Jinja template for the desired output. (Optional; if
+#' not provided, a dataframe is returned)
 #'
 #' @returns A string rendered from the Jinja output template and the Rosetta input template.
 #' @export
@@ -12,7 +13,7 @@
 #' in_template <- "{{ city }} is located in {{ country }}"
 #' out_template <- "CITY,COUNTRY,,{{ city }},{{ country }}"
 #' df <- rosettaFormat(statement, in_template, out_template)
-rosettaFormat <- function(s, in_template, out_template) {
+rosettaFormat <- function(s, in_template, out_template = "df") {
   # Extract variable names from template (everything between {{ }})
   var_pattern <- "\\{\\{\\s*([^}]+?)\\s*\\}\\}"
   var_names <- regmatches(in_template, gregexpr(var_pattern, in_template, perl = TRUE))[[1]]
@@ -34,7 +35,10 @@ rosettaFormat <- function(s, in_template, out_template) {
   values <- matches[-1]
   values_named <- as.list(values)
   names(values_named) <- var_names
-  rendered <- jinjar::render(out_template, !!!values_named)
-
+  if (out_template == "df") {
+    rendered <- as.data.frame(values_named)
+  } else {
+    rendered <- jinjar::render(out_template, !!!values_named)
+  }
   return(rendered)
 }

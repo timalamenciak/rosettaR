@@ -4,14 +4,15 @@
 \alias{rosettaFormat}
 \title{Change the format of a statement}
 \usage{
-rosettaFormat(s, in_template, out_template)
+rosettaFormat(s, in_template, out_template = "df")
 }
 \arguments{
 \item{s}{A statement in the form of a string.}
 
 \item{in_template}{A Rosetta Template to interpret the string.}
 
-\item{out_template}{A Jinja template for the desired output.}
+\item{out_template}{A Jinja template for the desired output. (Optional; if
+not provided, a dataframe is returned)}
 }
 \value{
 A string rendered from the Jinja output template and the Rosetta input template.
