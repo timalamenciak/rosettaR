@@ -8,9 +8,9 @@
 #' @export
 #'
 #' @examples
-#' templates <- initLibrary()
-#' templates <- addTemplate(templates, apple_template)
-addTemplate <- function(library, template, meta_id = NA) {
+#' templates <- init_library()
+#' templates <- add_template(templates, apple_template)
+add_template <- function(library, template, meta_id = NA) {
 library <- rbind(library, data.frame(id = nrow(library)+1,
                                      templateText = template,
                                      metaTemplateID = meta_id))

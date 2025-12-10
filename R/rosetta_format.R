@@ -12,8 +12,8 @@
 #' statement <- "Kitchener is located in Canada"
 #' in_template <- "{{ city }} is located in {{ country }}"
 #' out_template <- "CITY,COUNTRY,,{{ city }},{{ country }}"
-#' df <- rosettaFormat(statement, in_template, out_template)
-rosettaFormat <- function(s, in_template, out_template = "df") {
+#' df <- rosetta_format(statement, in_template, out_template)
+rosetta_format <- function(s, in_template, out_template = "df") {
   # Extract variable names from template (everything between {{ }})
   var_pattern <- "\\{\\{\\s*([^}]+?)\\s*\\}\\}"
   var_names <- regmatches(in_template, gregexpr(var_pattern, in_template, perl = TRUE))[[1]]

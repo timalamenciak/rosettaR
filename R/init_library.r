@@ -15,8 +15,8 @@
 #'                     "metaTemplateID" = 2)
 #' tf <- tempfile()
 #' writeLines(t_file, tf)
-#' templates <- loadTemplates(tf)
-initLibrary <- function (file) {
+#' templates <- init_library(tf)
+init_library <- function (file = NA) {
   if (missing(file)){
     return(data.frame(id = as.character(),
                       templateText = as.character(),

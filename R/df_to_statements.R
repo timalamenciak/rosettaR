@@ -10,12 +10,12 @@
 #' @export
 #'
 #' @examples
-#' templates <- initLibrary()
-#' templates <- addTemplate(templates, apple_template)
-#' statements <- dfToStatements(data.frame(object = "Apple X",
+#' templates <- init_library()
+#' templates <- add_template(templates, apple_template)
+#' statements <- df_to_statements(data.frame(object = "Apple X",
 #'                               quality = "weight", value="100.2",
 #'                              unit="grams", TemplateID = "1"),templates)
-dfToStatements <- function(df, templates) {
+df_to_statements <- function(df, templates) {
   results <- data.frame(TemplateID = as.character(),
                         statement = as.character())
   #Verify that the templates DF is in fact a proper templates DF.
