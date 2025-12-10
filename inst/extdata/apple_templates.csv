@@ -1,0 +1,4 @@
+﻿TemplateID,templateText,metaTemplateID
+1,{{ object }} has a {{ quality }} of {{ value }} {{ unit }},
+2,{{ object }} was grown in {{ location }} and picked {{ date_picked }},
+3,{{ object }} has the effect of making a human {{ magical_effect }},

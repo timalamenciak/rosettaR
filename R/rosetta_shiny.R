@@ -87,7 +87,6 @@ rosetta_shiny <- function() {
     rv <- shiny::reactiveValues(
       templates = rosettaR::init_library(),
       statements = data.frame(
-        id = as.character(),
         TemplateID = as.character(),
         statementText = as.character()
       )
@@ -97,7 +96,7 @@ rosetta_shiny <- function() {
       rv$templates
     }, selection = "single")
 
-    observeEvent(input$template_table_rows_selected, {
+    shiny::observeEvent(input$template_table_rows_selected, {
       row <- rv$templates[input$template_table_rows_selected, ]
       updateTextInput(session, "template_id", value = row$id)
       updateTextAreaInput(session, "template_text", value = row$templateText)
@@ -112,15 +111,15 @@ rosetta_shiny <- function() {
     #  )
     #})
 
-    observeEvent(input$add_template_btn, {
+    shiny::observeEvent(input$add_template_btn, {
       rv$templates <- rosettaR::add_template(rv$templates, input$template_text)
     })
 
-    observeEvent(input$delete_template_btn, {
+    shiny::observeEvent(input$delete_template_btn, {
       rv$templates <- rv$templates[rv$templates$id != input$template_id, ]
     })
 
-    observeEvent(input$import_templates, {
+    shiny::observeEvent(input$import_templates, {
       path <- input$import_templates$datapath
       if (grepl("\\.csv$", path)) rv$templates <- read.csv(path, stringsAsFactors = FALSE)
     })
@@ -130,7 +129,7 @@ rosetta_shiny <- function() {
       content = function(file) write.csv(rv$templates, file, row.names = FALSE)
     )
 
-    observeEvent(input$engine_input_file, {
+    shiny::observeEvent(input$engine_input_file, {
       req(input$engine_input_file)
       df <- read.csv(input$engine_input_file$datapath, stringsAsFactors = FALSE)
 
@@ -155,16 +154,16 @@ rosetta_shiny <- function() {
       )
     })
 
-    output$engine_input_preview_table <- renderDT({
+    output$engine_input_preview_table <- DT::renderDT({
       if (input$engine_input_type == "statements") rv$statements else rv$data_input
     })
 
-    observeEvent(input$convert_to_statements_btn, {
+    shiny::observeEvent(input$convert_to_statements_btn, {
       req(rv$data_input)
       rv$statements <- rosettaR::df_to_statements(df = rv$data_input, library = rv$templates)
     })
 
-    output$engine_statements_out <- renderDT({
+    output$engine_statements_out <- DT::renderDT({
       req(rv$statements)
       rv$statements
     })
@@ -174,7 +173,7 @@ rosetta_shiny <- function() {
       content = function(file) write.csv(rv$statements, file, row.names = FALSE)
     )
 
-    observeEvent(input$convert_statements_template_btn, {
+    shiny::observeEvent(input$convert_statements_template_btn, {
       req(rv$statements, input$engine_output_template)
       rv$converted_output <- rosettaR::rosetta_format(
         rv$statements,
@@ -182,7 +181,7 @@ rosetta_shiny <- function() {
       )
     })
 
-    output$engine_converted_output <- renderText({
+    output$engine_converted_output <- shiny::renderText({
       req(rv$converted_output)
       rv$converted_output
     })
