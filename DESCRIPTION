@@ -30,3 +30,8 @@ Imports:
     utils
 Depends: 
     R (>= 3.5)
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+URL: https://timalamenciak.github.io/rosettaR/
