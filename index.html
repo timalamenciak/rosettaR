@@ -73,13 +73,27 @@
 <span><span class="va">statement</span> <span class="op">&lt;-</span> <span class="st">"Kitchener is located in Canada"</span></span>
 <span><span class="va">in_template</span> <span class="op">&lt;-</span> <span class="st">"{{ city }} is located in {{ country }}"</span></span>
 <span><span class="va">out_template</span> <span class="op">&lt;-</span> <span class="st">"CITY,COUNTRY,,{{ city }},{{ country }}"</span></span>
-<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">rosettaFormat</span><span class="op">(</span><span class="va">statement</span>, <span class="va">in_template</span>, <span class="va">out_template</span><span class="op">)</span></span></code></pre></div>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/rosetta_format.html">rosetta_format</a></span><span class="op">(</span><span class="va">statement</span>, <span class="va">in_template</span>, <span class="va">out_template</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
 <div class="section level1">
 <h1 id="development-notes">Development notes<a class="anchor" aria-label="anchor" href="#development-notes"></a>
 </h1>
 <p>This is a very early version of this package. It is based on the idea of Rosetta Statements described in <a href="https://arxiv.org/abs/2407.20007" class="external-link">Rosetta Statements: Simplifying FAIR Knowledge Graph Construction with a User-Centered Approach</a> by Lars Vogt et al.</p>
+<div class="section level2">
+<h2 id="development-tasks">Development tasks<a class="anchor" aria-label="anchor" href="#development-tasks"></a>
+</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Implement slot restrictions and validation using LinkML (major).</label></li>
+<li><label><input type="checkbox">Debug and rework Shiny interface (major).</label></li>
+<li><label><input type="checkbox">Add documentation on working with multiple template-statement pairs.</label></li>
+<li><label><input type="checkbox">Enhance Apple example to use proper RDF, add other data formats.</label></li>
+<li><label><input type="checkbox">Design hexagon logo for rosettaR.</label></li>
+<li><label><input type="checkbox">Submit rosettaR to <a href="https://cran.r-project.org/" class="external-link">CRAN</a>.</label></li>
+<li><label><input type="checkbox">Submit rosettaR for <a href="https://ropensci.org/software-review/" class="external-link">rOpenSci peer review</a>.</label></li>
+<li><label><input type="checkbox">Update and submit <a href="https://arxiv.org/abs/2407.20007" class="external-link">Rosetta Statements pre-print</a>.</label></li>
+</ul>
+</div>
 </div>
 
   </main><aside class="col-md-3"><div class="license">
