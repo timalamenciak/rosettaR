@@ -51,5 +51,3 @@ Approach](https://arxiv.org/abs/2407.20007) by Lars Vogt et al.
 - [ ] Submit rosettaR to [CRAN](https://cran.r-project.org/).
 - [ ] Submit rosettaR for [rOpenSci peer
   review](https://ropensci.org/software-review/).
-- [ ] Update and submit [Rosetta Statements
-  pre-print](https://arxiv.org/abs/2407.20007).
