@@ -109,9 +109,21 @@ template-statement pair constitutes a core piece of information
 multiple representations.</p>
 <p>Here we can turn it into a data frame:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/rosetta_format.html">rosetta_format</a></span><span class="op">(</span><span class="va">apple_statement</span>, <span class="va">apple_template</span><span class="op">)</span></span>
-<span><span class="co">#&gt;    object quality  value  unit</span></span>
-<span><span class="co">#&gt; 1 Apple X  weight 241.68 grams</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="fu"><a href="../reference/rosetta_format.html">rosetta_format</a></span><span class="op">(</span><span class="va">apple_statement</span>, <span class="va">apple_template</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<thead><tr class="header">
+<th align="left">object</th>
+<th align="left">quality</th>
+<th align="left">value</th>
+<th align="left">unit</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Apple X</td>
+<td align="left">weight</td>
+<td align="left">241.68</td>
+<td align="left">grams</td>
+</tr></tbody>
+</table>
 <p>That’s a pretty straightforward usage, but we can get more
 complicated with it. Here we can transform the statement into a CSV,
 where the slots become column headers and the values go in the
@@ -233,6 +245,118 @@ what happens:</p>
 <span id="cb6-51"><a href="#cb6-51" tabindex="-1"></a></span>
 <span id="cb6-52"><a href="#cb6-52" tabindex="-1"></a>uo<span class="sc">:</span><span class="dv">0000021</span></span>
 <span id="cb6-53"><a href="#cb6-53" tabindex="-1"></a>    rdf<span class="sc">:</span>type uo<span class="sc">:</span>grams .</span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="processing-multiple-statements">Processing multiple statements<a class="anchor" aria-label="anchor" href="#processing-multiple-statements"></a>
+</h2>
+<p>Doing a single statement is fairly trivial. The real power of Rosetta
+Statements comes when you have a lot of statements using multiple
+templates. In order to make this work, there needs to be a library of
+templates.</p>
+<p>This “library” is a simple data frame, but it has to have specific
+headers. We have built a command that creates one (or loads one from a
+properly formatted CSV)</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">templates</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/init_library.html">init_library</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">templates</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<thead><tr class="header">
+<th align="left">TemplateID</th>
+<th align="left">templateText</th>
+<th align="left">metaTemplateID</th>
+</tr></thead>
+<tbody></tbody>
+</table>
+<p>This creates a blank data frame. You can add templates using the
+<code><a href="../reference/add_template.html">add_template()</a></code> function, which is a pretty simple statement
+that adds a new template given a string and optional meta template ID
+(more on meta templates later).</p>
+<p>Let’s load a set of templates that we have included as an example.
+You can use <code><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv()</a></code> for this, but the
+<code><a href="../reference/init_library.html">init_library()</a></code> function also verifies that the template
+file is formatted properly:</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">templates</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/init_library.html">init_library</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_templates.csv"</span>, package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">templates</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<colgroup>
+<col width="11%">
+<col width="72%">
+<col width="15%">
+</colgroup>
+<thead><tr class="header">
+<th align="right">TemplateID</th>
+<th align="left">templateText</th>
+<th align="left">metaTemplateID</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">{{ object }} has a {{ quality }} of {{ value }} {{ unit
+}}</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">{{ object }} was grown in {{ location }} and picked {{
+date_picked }}</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">{{ object }} has the effect of making a human {{
+magical_effect }}</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+<p>So now we have a data frame with 3 templates about apples. Let’s load
+some statements:</p>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">statements</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_statements.csv"</span>, package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">statements</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<thead><tr class="header">
+<th align="right">TemplateID</th>
+<th align="left">statement</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Apple X has a weight of 2332.4 grams</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="left">Apple Y has a weight of 23 stone</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">Apple X was grown in Germany and picked 2025</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Apple Y was grown in Canada and picked January 4,
+2025</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Apple X has the effect of making a human happy</td>
+</tr>
+<tr class="even">
+<td align="right">3</td>
+<td align="left">Apple Y has the effect of making a human sleepy</td>
+</tr>
+</tbody>
+</table>
+<p>Now we can convert each statement into a data frame:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">merged</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">inner_join</a></span><span class="op">(</span><span class="va">statements</span>, <span class="va">templates</span>, by <span class="op">=</span> <span class="st">"TemplateID"</span><span class="op">)</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">merged</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">row</span> <span class="op">=</span> <span class="va">merged</span><span class="op">[</span><span class="va">i</span>, <span class="op">]</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p>This loop mashes all the results into one data frame. It looks
+something like this:</p>
 </div>
 <div class="section level2">
 <h2 id="under-construction---much-more-to-come">Under construction - much more to come!<a class="anchor" aria-label="anchor" href="#under-construction---much-more-to-come"></a>

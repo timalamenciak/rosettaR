@@ -54,10 +54,12 @@ anchor”) that can be transformed into multiple representations.
 Here we can turn it into a data frame:
 
 ``` r
-rosetta_format(apple_statement, apple_template)
-#>    object quality  value  unit
-#> 1 Apple X  weight 241.68 grams
+knitr::kable(rosetta_format(apple_statement, apple_template))
 ```
+
+| object  | quality | value  | unit  |
+|:--------|:--------|:-------|:------|
+| Apple X | weight  | 241.68 | grams |
 
 That’s a pretty straightforward usage, but we can get more complicated
 with it. Here we can transform the statement into a CSV, where the slots
@@ -188,6 +190,78 @@ ex:appleweightValueSpec
 uo:0000021
     rdf:type uo:grams .
 ```
+
+## Processing multiple statements
+
+Doing a single statement is fairly trivial. The real power of Rosetta
+Statements comes when you have a lot of statements using multiple
+templates. In order to make this work, there needs to be a library of
+templates.
+
+This “library” is a simple data frame, but it has to have specific
+headers. We have built a command that creates one (or loads one from a
+properly formatted CSV)
+
+``` r
+templates <- init_library()
+knitr::kable(templates)
+```
+
+| TemplateID | templateText | metaTemplateID |
+|------------|--------------|----------------|
+
+This creates a blank data frame. You can add templates using the
+[`add_template()`](https://timalamenciak.github.io/rosettaR/reference/add_template.md)
+function, which is a pretty simple statement that adds a new template
+given a string and optional meta template ID (more on meta templates
+later).
+
+Let’s load a set of templates that we have included as an example. You
+can use [`read.csv()`](https://rdrr.io/r/utils/read.table.html) for
+this, but the
+[`init_library()`](https://timalamenciak.github.io/rosettaR/reference/init_library.md)
+function also verifies that the template file is formatted properly:
+
+``` r
+templates <- init_library(system.file("extdata/apple_templates.csv", package="rosettaR"))
+knitr::kable(templates)
+```
+
+| TemplateID | templateText                                                          | metaTemplateID |
+|-----------:|:----------------------------------------------------------------------|:---------------|
+|          1 | {{ object }} has a {{ quality }} of {{ value }} {{ unit }}            | NA             |
+|          2 | {{ object }} was grown in {{ location }} and picked {{ date_picked }} | NA             |
+|          3 | {{ object }} has the effect of making a human {{ magical_effect }}    | NA             |
+
+So now we have a data frame with 3 templates about apples. Let’s load
+some statements:
+
+``` r
+statements <- read.csv(system.file("extdata/apple_statements.csv", package="rosettaR"))
+knitr::kable(statements)
+```
+
+| TemplateID | statement                                              |
+|-----------:|:-------------------------------------------------------|
+|          1 | Apple X has a weight of 2332.4 grams                   |
+|          1 | Apple Y has a weight of 23 stone                       |
+|          2 | Apple X was grown in Germany and picked 2025           |
+|          2 | Apple Y was grown in Canada and picked January 4, 2025 |
+|          3 | Apple X has the effect of making a human happy         |
+|          3 | Apple Y has the effect of making a human sleepy        |
+
+Now we can convert each statement into a data frame:
+
+``` r
+results <- data.frame()
+merged <- dplyr::inner_join(statements, templates, by = "TemplateID")
+for (i in 1:nrow(merged)) {
+  row = merged[i, ]
+}
+```
+
+This loop mashes all the results into one data frame. It looks something
+like this:
 
 ## Under construction - much more to come!
 
