@@ -27,7 +27,10 @@ Imports:
     dplyr,
     jinjar,
     shiny,
-    utils
+    utils,
+    linkmlR
+Remotes:
+  timalamenciak/linkmlR
 Depends: 
     R (>= 3.5)
 Suggests: 

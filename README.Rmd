@@ -48,6 +48,7 @@ This is a very early version of this package. It is based on the idea of Rosetta
 ## Development tasks
 - [ ] Implement slot restrictions and validation using LinkML (major).
 - [ ] Debug and rework Shiny interface (major).
+- [ ] Implement support for optional slots.
 - [ ] Add documentation on working with multiple template-statement pairs.
 - [ ] Enhance Apple example to use proper RDF, add other data formats.
 - [ ] Design hexagon logo for rosettaR.

@@ -23,7 +23,8 @@ Change a data frame into a series of statements based on templates.
 \examples{
 templates <- init_library()
 templates <- add_template(templates, apple_template)
-statements <- df_to_statements(data.frame(object = "Apple X",
+df <- data.frame(object = "Apple X",
                               quality = "weight", value="100.2",
-                             unit="grams", TemplateID = "1"),templates)
+                             unit="grams", TemplateID = "1")
+statements <- df_to_statements(df,templates)
 }

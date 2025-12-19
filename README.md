@@ -44,6 +44,7 @@ Approach](https://arxiv.org/abs/2407.20007) by Lars Vogt et al.
 
 - [ ] Implement slot restrictions and validation using LinkML (major).
 - [ ] Debug and rework Shiny interface (major).
+- [ ] Implement support for optional slots.
 - [ ] Add documentation on working with multiple template-statement
   pairs.
 - [ ] Enhance Apple example to use proper RDF, add other data formats.

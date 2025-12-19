@@ -11,7 +11,7 @@
 #' templates <- init_library()
 #' templates <- add_template(templates, apple_template)
 add_template <- function(library, template, meta_id = NA) {
-library <- rbind(library, data.frame(id = nrow(library)+1,
+library <- rbind(library, data.frame(TemplateID = nrow(library)+1,
                                      templateText = template,
                                      metaTemplateID = meta_id))
 return(library)

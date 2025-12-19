@@ -98,8 +98,8 @@ rosetta_shiny <- function() {
 
     shiny::observeEvent(input$template_table_rows_selected, {
       row <- rv$templates[input$template_table_rows_selected, ]
-      updateTextInput(session, "template_id", value = row$id)
-      updateTextAreaInput(session, "template_text", value = row$templateText)
+      shiny::updateTextInput(session, "template_id", value = row$id)
+      shiny::updateTextAreaInput(session, "template_text", value = row$templateText)
     })
 
     #output$template_variable_display <- renderUI({
@@ -121,20 +121,20 @@ rosetta_shiny <- function() {
 
     shiny::observeEvent(input$import_templates, {
       path <- input$import_templates$datapath
-      if (grepl("\\.csv$", path)) rv$templates <- read.csv(path, stringsAsFactors = FALSE)
+      if (grepl("\\.csv$", path)) rv$templates <- utils::read.csv(path, stringsAsFactors = FALSE)
     })
 
     output$export_templates <- downloadHandler(
       filename = "template_library.csv",
-      content = function(file) write.csv(rv$templates, file, row.names = FALSE)
+      content = function(file) utils::write.csv(rv$templates, file, row.names = FALSE)
     )
 
     shiny::observeEvent(input$engine_input_file, {
       req(input$engine_input_file)
-      df <- read.csv(input$engine_input_file$datapath, stringsAsFactors = FALSE)
+      df <- utils::read.csv(input$engine_input_file$datapath, stringsAsFactors = FALSE)
 
       if (input$engine_input_type == "statements") {
-        validate(
+        shiny::validate(
           need("TemplateID" %in% names(df), "File missing TemplateID column."),
           need("statementText" %in% names(df), "File missing statementText column.")
         )
@@ -150,7 +150,7 @@ rosetta_shiny <- function() {
       req(input$engine_input_file)
       bslib::card(
         bslib::card_header("Preview"),
-        DTOutput("engine_input_preview_table")
+        DT::DTOutput("engine_input_preview_table")
       )
     })
 
@@ -168,13 +168,13 @@ rosetta_shiny <- function() {
       rv$statements
     })
 
-    output$download_statements_btn <- downloadHandler(
+    output$download_statements_btn <- shiny::downloadHandler(
       filename = "rosetta_statements.csv",
       content = function(file) write.csv(rv$statements, file, row.names = FALSE)
     )
 
     shiny::observeEvent(input$convert_statements_template_btn, {
-      req(rv$statements, input$engine_output_template)
+      shiny::req(rv$statements, input$engine_output_template)
       rv$converted_output <- rosettaR::rosetta_format(
         rv$statements,
         template = input$engine_output_template

@@ -12,21 +12,22 @@
 #' @examples
 #' templates <- init_library()
 #' templates <- add_template(templates, apple_template)
-#' statements <- df_to_statements(data.frame(object = "Apple X",
+#' df <- data.frame(object = "Apple X",
 #'                               quality = "weight", value="100.2",
-#'                              unit="grams", TemplateID = "1"),templates)
+#'                              unit="grams", TemplateID = "1")
+#' statements <- df_to_statements(df,templates)
 df_to_statements <- function(df, templates) {
   results <- data.frame(TemplateID = as.character(),
                         statement = as.character())
   #Verify that the templates DF is in fact a proper templates DF.
-  if (!identical(colnames(templates), c("id", "templateText", "metaTemplateID"))){
+  if (!identical(colnames(templates), c("TemplateID", "templateText", "metaTemplateID"))){
     stop(paste0("Template library format is incorrect. Did you create it with
                 rosettaR::initLibrary()?"))
   }
   df_names <- colnames(df)
   for (i in 1:nrow(df)) {
     row <- df[i,]
-    template <- dplyr::filter(templates, id == row$TemplateID)
+    template <- dplyr::filter(templates, TemplateID == row$TemplateID)
     statement <- jinjar::render(template$templateText, !!!as.list(row))
     out_df <- data.frame(TemplateID = row$TemplateID, statement = statement)
     results <- rbind(results, out_df)
