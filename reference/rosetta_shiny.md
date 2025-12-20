@@ -11,3 +11,11 @@ rosetta_shiny()
 ## Value
 
 Nothing.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+rosetta_shiny()
+} # }
+```

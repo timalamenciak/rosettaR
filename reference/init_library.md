@@ -21,3 +21,13 @@ init_library(file = NA)
 
 A dataframe containing either the loaded templates or the proper headers
 for use with other functions.
+
+## Examples
+
+``` r
+#Initialize an empty library
+templates <- init_library()
+
+#Load a CSV library
+apple_templates <- init_library(system.file("extdata", "apple_templates.csv", package="rosettaR"))
+```
