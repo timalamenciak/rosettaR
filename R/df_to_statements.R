@@ -25,6 +25,7 @@ df_to_statements <- function(df, templates) {
                 rosettaR::initLibrary()?"))
   }
   df_names <- colnames(df)
+  TemplateID <- NULL #this fixes a silly warning potentially
   for (i in 1:nrow(df)) {
     row <- df[i,]
     template <- dplyr::filter(templates, TemplateID == row$TemplateID)

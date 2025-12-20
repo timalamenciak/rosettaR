@@ -28,7 +28,8 @@ Imports:
     jinjar,
     shiny,
     utils,
-    linkmlR
+    linkmlR,
+    DT
 Remotes:
   timalamenciak/linkmlR
 Depends: 

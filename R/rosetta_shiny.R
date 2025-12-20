@@ -4,6 +4,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#' rosetta_shiny()
+#' }
 rosetta_shiny <- function() {
 
   # ------------------------- UI ------------------------- #
@@ -124,30 +127,30 @@ rosetta_shiny <- function() {
       if (grepl("\\.csv$", path)) rv$templates <- utils::read.csv(path, stringsAsFactors = FALSE)
     })
 
-    output$export_templates <- downloadHandler(
+    output$export_templates <- shiny::downloadHandler(
       filename = "template_library.csv",
       content = function(file) utils::write.csv(rv$templates, file, row.names = FALSE)
     )
 
     shiny::observeEvent(input$engine_input_file, {
-      req(input$engine_input_file)
+      shiny::req(input$engine_input_file)
       df <- utils::read.csv(input$engine_input_file$datapath, stringsAsFactors = FALSE)
 
       if (input$engine_input_type == "statements") {
         shiny::validate(
-          need("TemplateID" %in% names(df), "File missing TemplateID column."),
-          need("statementText" %in% names(df), "File missing statementText column.")
+          shiny::need("TemplateID" %in% names(df), "File missing TemplateID column."),
+          shiny::need("statementText" %in% names(df), "File missing statementText column.")
         )
         rv$statements <- df
 
       } else if (input$engine_input_type == "dataframe") {
-        validate(need("TemplateID" %in% names(df), "Data frame must include a TemplateID column."))
+        shiny::validate(shiny::need("TemplateID" %in% names(df), "Data frame must include a TemplateID column."))
         rv$data_input <- df
       }
     })
 
     output$engine_input_preview <- shiny::renderUI({
-      req(input$engine_input_file)
+      shiny::req(input$engine_input_file)
       bslib::card(
         bslib::card_header("Preview"),
         DT::DTOutput("engine_input_preview_table")
@@ -159,18 +162,18 @@ rosetta_shiny <- function() {
     })
 
     shiny::observeEvent(input$convert_to_statements_btn, {
-      req(rv$data_input)
+      shiny::req(rv$data_input)
       rv$statements <- rosettaR::df_to_statements(df = rv$data_input, library = rv$templates)
     })
 
     output$engine_statements_out <- DT::renderDT({
-      req(rv$statements)
+      shiny::req(rv$statements)
       rv$statements
     })
 
     output$download_statements_btn <- shiny::downloadHandler(
       filename = "rosetta_statements.csv",
-      content = function(file) write.csv(rv$statements, file, row.names = FALSE)
+      content = function(file) utils::write.csv(rv$statements, file, row.names = FALSE)
     )
 
     shiny::observeEvent(input$convert_statements_template_btn, {
@@ -182,11 +185,11 @@ rosetta_shiny <- function() {
     })
 
     output$engine_converted_output <- shiny::renderText({
-      req(rv$converted_output)
+      shiny::req(rv$converted_output)
       rv$converted_output
     })
 
-    output$download_converted_output_btn <- downloadHandler(
+    output$download_converted_output_btn <- shiny::downloadHandler(
       filename = "converted_output.txt",
       content = function(file) writeLines(rv$converted_output, file)
     )

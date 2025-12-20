@@ -10,12 +10,11 @@
 #' @export
 #'
 #' @examples
-#' t_file <- data.frame("TemplateID" = 1,
-#'                     "templateText" = "{{ city }} is in {{ country }},
-#'                     "metaTemplateID" = 2)
-#' tf <- tempfile()
-#' writeLines(t_file, tf)
-#' templates <- init_library(tf)
+#' #Initialize an empty library
+#' templates <- init_library()
+#'
+#' #Load a CSV library
+#' apple_templates <- init_library(system.file("extdata", "apple_templates.csv", package="rosettaR"))
 init_library <- function (file = NA) {
   if (missing(file)){
     return(data.frame(TemplateID = as.character(),

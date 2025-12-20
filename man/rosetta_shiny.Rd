@@ -12,3 +12,8 @@ Nothing.
 \description{
 Rosetta Statements Shiny interface
 }
+\examples{
+\dontrun{
+rosetta_shiny()
+}
+}

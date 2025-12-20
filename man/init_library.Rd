@@ -19,3 +19,10 @@ headers for use with other functions.
 \description{
 Load a set of Rosetta templates into a dataframe.
 }
+\examples{
+#Initialize an empty library
+templates <- init_library()
+
+#Load a CSV library
+apple_templates <- init_library(system.file("extdata", "apple_templates.csv", package="rosettaR"))
+}
