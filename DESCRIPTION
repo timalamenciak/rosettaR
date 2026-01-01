@@ -36,6 +36,8 @@ Depends:
     R (>= 3.5)
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 URL: https://timalamenciak.github.io/rosettaR/
+Config/testthat/edition: 3

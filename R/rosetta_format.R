@@ -14,27 +14,41 @@
 #' out_template <- "CITY,COUNTRY,,{{ city }},{{ country }}"
 #' df <- rosetta_format(statement, in_template, out_template)
 rosetta_format <- function(s, in_template, out_template = "df") {
-  # Extract variable names from template (everything between {{ }})
+  # 1. Extract variable names from template (everything between {{ }})
   var_pattern <- "\\{\\{\\s*([^}]+?)\\s*\\}\\}"
   var_names <- regmatches(in_template, gregexpr(var_pattern, in_template, perl = TRUE))[[1]]
   var_names <- gsub("\\{\\{\\s*|\\s*\\}\\}", "", var_names)
 
-  regex_pattern <- in_template
-  # Replace {{ var }} with capture groups
-  regex_pattern <- gsub("\\{\\{\\s*[^}]+?\\s*\\}\\}", "(.*)", regex_pattern)
+  # 2. Construct Safe Regex Pattern
+  # We need to escape special regex characters (like $, ., ?) in the template text,
+  # but NOT escape the {{ variables }} themselves.
 
-  # Extract values from the input string
+  # Step A: Replace {{ variables }} with a safe placeholder
+  # We use a unique string that won't confuse the regex parser
+  placeholder <- "___ROSETTA_VAR_PLACEHOLDER___"
+  temp_pattern <- gsub("\\{\\{\\s*[^}]+?\\s*\\}\\}", placeholder, in_template)
+
+  # Step B: Escape all special regex characters in the remaining text
+  # This pattern matches: . | ( ) [ ] { } ^ $ * + ? \
+  # We replace them with a double backslash version (e.g., "." becomes "\.")
+  temp_pattern <- gsub("([.|()\\^{}+$*?]|\\[|\\]|\\\\)", "\\\\\\1", temp_pattern)
+
+  # Step C: Replace the placeholder with the capture group (.*)
+  regex_pattern <- gsub(placeholder, "(.*)", temp_pattern, fixed = TRUE)
+
+  # 3. Extract values from the input string
   matches <- regmatches(s, regexec(regex_pattern, s, perl = TRUE))[[1]]
 
   # Check if match was successful
   if (length(matches) < 2) {
-    stop("Input string does not match template pattern")
+    stop("Error: Input string does not match template pattern")
   }
 
   # First element is the full match, rest are capture groups
   values <- matches[-1]
   values_named <- as.list(values)
   names(values_named) <- var_names
+
   if (out_template == "df") {
     rendered <- as.data.frame(values_named)
   } else {
