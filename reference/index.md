@@ -23,3 +23,5 @@
   : Change the format of a statement
 - [`rosetta_shiny()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_shiny.md)
   : Rosetta Statements Shiny interface
+- [`rosetta_validate()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_validate.md)
+  : Validate a data frame against a LinkML schema
