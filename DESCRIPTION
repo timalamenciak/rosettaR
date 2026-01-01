@@ -29,7 +29,10 @@ Imports:
     shiny,
     utils,
     linkmlR,
-    DT
+    DT,
+    reticulate,
+    jsonlite,
+    rlang
 Remotes:
   timalamenciak/linkmlR
 Depends: 

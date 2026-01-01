@@ -1,0 +1,17 @@
+id: https://example.org/person-schema
+name: PersonSchema
+prefixes:
+  linkml: https://w3id.org/linkml/
+imports:
+  - linkml:types
+default_range: string
+
+classes:
+  Person:
+    attributes:
+      full_name:
+        required: true
+      age:
+        range: integer
+      city:
+        required: false
