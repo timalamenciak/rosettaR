@@ -42,10 +42,11 @@ Approach](https://arxiv.org/abs/2407.20007) by Lars Vogt et al.
 
 ## Development tasks
 
-- [ ] Implement slot restrictions and validation using LinkML (major).
-- [ ] Debug and rework Shiny interface (major).
-- [ ] Implement support for optional slots.
-- [ ] Add documentation on working with multiple template-statement
+- [ ] Build slot restrictions into template validation workflow.
+- [x] Implement slot restrictions and validation using LinkML (major).
+- [x] Debug and rework Shiny interface (major).
+- [x] Implement support for optional slots.
+- [x] Add documentation on working with multiple template-statement
   pairs.
 - [ ] Enhance Apple example to use proper RDF, add other data formats.
 - [ ] Design hexagon logo for rosettaR.
