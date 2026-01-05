@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">rosettaR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -257,8 +257,9 @@ templates.</p>
 headers. We have built a command that creates one (or loads one from a
 properly formatted CSV)</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">templates</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/init_library.html">init_library</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">templates</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># Create an empty library</span></span>
+<span><span class="va">empty_lib</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/init_library.html">init_library</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">empty_lib</span><span class="op">)</span></span></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">TemplateID</th>
@@ -267,14 +268,9 @@ properly formatted CSV)</p>
 </tr></thead>
 <tbody></tbody>
 </table>
-<p>This creates a blank data frame. You can add templates using the
-<code><a href="../reference/add_template.html">add_template()</a></code> function, which is a pretty simple statement
-that adds a new template given a string and optional meta template ID
-(more on meta templates later).</p>
-<p>Let’s load a set of templates that we have included as an example.
-You can use <code><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv()</a></code> for this, but the
-<code><a href="../reference/init_library.html">init_library()</a></code> function also verifies that the template
-file is formatted properly:</p>
+<p>Now let’s load a real set of templates that we have included as an
+example using the <code><a href="../reference/init_library.html">init_library()</a></code> function. This function
+verifies that the template file is formatted properly:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">templates</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/init_library.html">init_library</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_templates.csv"</span>, package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">templates</span><span class="op">)</span></span></code></pre></div>
@@ -310,63 +306,186 @@ magical_effect }}</td>
 </tr>
 </tbody>
 </table>
-<p>So now we have a data frame with 3 templates about apples. Let’s load
-some statements:</p>
+<p>Next, let’s load some statements. Note that these are just plain text
+strings:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">statements</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_statements.csv"</span>, package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">statements</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">statements</span><span class="op">)</span></span>
+<span><span class="co">#&gt;   TemplateID                                              statement</span></span>
+<span><span class="co">#&gt; 1          1                   Apple X has a weight of 2332.4 grams</span></span>
+<span><span class="co">#&gt; 2          1                       Apple Y has a weight of 23 stone</span></span>
+<span><span class="co">#&gt; 3          2           Apple X was grown in Germany and picked 2025</span></span>
+<span><span class="co">#&gt; 4          2 Apple Y was grown in Canada and picked January 4, 2025</span></span>
+<span><span class="co">#&gt; 5          3         Apple X has the effect of making a human happy</span></span>
+<span><span class="co">#&gt; 6          3        Apple Y has the effect of making a human sleepy</span></span></code></pre></div>
+<p>We can now use the <code><a href="../reference/rosetta_match.html">rosetta_match()</a></code> function. This
+“router” function automatically iterates through your statements, finds
+the matching template in your library, and extracts the data.</p>
+<p>Unlike the simple rosetta_format which returns a wide dataframe
+(columns for variables), <code>rosetta_match</code> returns a Long
+Dataframe (Entity-Attribute-Value). This ensures that we don’t get a
+“sparse matrix” full of NAs when mixing different templates.</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rosetta_match.html">rosetta_match</a></span><span class="op">(</span><span class="va">statements</span>, <span class="va">templates</span><span class="op">)</span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">results</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <table class="table">
 <thead><tr class="header">
-<th align="right">TemplateID</th>
-<th align="left">statement</th>
+<th align="right">statement_id</th>
+<th align="left">statement_text</th>
+<th align="left">template_id</th>
+<th align="left">variable</th>
+<th align="left">value</th>
 </tr></thead>
-<tbody>
-<tr class="odd">
-<td align="right">1</td>
-<td align="left">Apple X has a weight of 2332.4 grams</td>
-</tr>
-<tr class="even">
-<td align="right">1</td>
-<td align="left">Apple Y has a weight of 23 stone</td>
-</tr>
-<tr class="odd">
-<td align="right">2</td>
-<td align="left">Apple X was grown in Germany and picked 2025</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="left">Apple Y was grown in Canada and picked January 4,
-2025</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="left">Apple X has the effect of making a human happy</td>
-</tr>
-<tr class="even">
-<td align="right">3</td>
-<td align="left">Apple Y has the effect of making a human sleepy</td>
-</tr>
-</tbody>
+<tbody></tbody>
 </table>
-<p>Now we can convert each statement into a data frame:</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="va">merged</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="external-link">inner_join</a></span><span class="op">(</span><span class="va">statements</span>, <span class="va">templates</span>, by <span class="op">=</span> <span class="st">"TemplateID"</span><span class="op">)</span></span>
-<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">merged</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">row</span> <span class="op">=</span> <span class="va">merged</span><span class="op">[</span><span class="va">i</span>, <span class="op">]</span></span>
-<span><span class="op">}</span></span></code></pre></div>
-<p>This loop mashes all the results into one data frame. It looks
-something like this:</p>
+<p>This output structure is ideal for building knowledge graphs, as
+every row corresponds to a single semantic fact
+(Subject-Predicate-Object).</p>
 </div>
 <div class="section level2">
-<h2 id="under-construction---much-more-to-come">Under construction - much more to come!<a class="anchor" aria-label="anchor" href="#under-construction---much-more-to-come"></a>
+<h2 id="advanced-templating">Advanced templating<a class="anchor" aria-label="anchor" href="#advanced-templating"></a>
 </h2>
-<p><strong>To do:</strong></p>
+<p>Real-world data is rarely as clean as “Apple 1 has a weight of 100
+g”. Often, statements include optional details or citations.
+<code>rosettaR</code> supports advanced template syntax to handle these
+cases.</p>
+<div class="section level3">
+<h3 id="optional-information-in-templates">Optional information in templates<a class="anchor" aria-label="anchor" href="#optional-information-in-templates"></a>
+</h3>
+<p>You can mark parts of a template as optional by enclosing them in
+square brackets <code>[...]</code>. If the text inside the brackets is
+missing from the statement, the parser will simply skip it (and return
+empty values for those slots) rather than throwing an error.</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Template with optional 'region' block</span></span>
+<span><span class="va">tmpl</span> <span class="op">&lt;-</span> <span class="st">"{{ city }} is located in {{ country }} [in the region of {{ region }}]"</span></span>
+<span></span>
+<span><span class="co"># Statement WITH region</span></span>
+<span><span class="va">s1</span> <span class="op">&lt;-</span> <span class="st">"Kitchener is located in Canada in the region of Waterloo"</span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="fu"><a href="../reference/rosetta_format.html">rosetta_format</a></span><span class="op">(</span><span class="va">s1</span>, <span class="va">tmpl</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<thead><tr class="header">
+<th align="left">city</th>
+<th align="left">country</th>
+<th align="left">region</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Kitchener</td>
+<td align="left">Canada</td>
+<td align="left">Waterloo</td>
+</tr></tbody>
+</table>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co"># Statement WITHOUT region</span></span>
+<span><span class="va">s2</span> <span class="op">&lt;-</span> <span class="st">"Kitchener is located in Canada"</span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="fu"><a href="../reference/rosetta_format.html">rosetta_format</a></span><span class="op">(</span><span class="va">s2</span>, <span class="va">tmpl</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<thead><tr class="header">
+<th align="left">city</th>
+<th align="left">country</th>
+<th align="left">region</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Kitchener</td>
+<td align="left">Canada</td>
+<td align="left"></td>
+</tr></tbody>
+</table>
+</div>
+<div class="section level3">
+<h3 id="attribution-and-sources">Attribution and sources<a class="anchor" aria-label="anchor" href="#attribution-and-sources"></a>
+</h3>
+<p>A key requirement for scientific knowledge graphs is attribution. You
+can include citation logic directly in your templates. This makes it
+explicit which statement is associated with which source.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Template explicitly asking for a DOI</span></span>
+<span><span class="va">cited_tmpl</span> <span class="op">&lt;-</span> <span class="st">"{{ city }} is in {{ country }} according to {{ doi }}"</span></span>
+<span></span>
+<span><span class="co"># Input statement</span></span>
+<span><span class="va">stmt</span> <span class="op">&lt;-</span> <span class="st">"Kitchener is in Canada according to 10.123/example"</span></span>
+<span></span>
+<span><span class="co"># Result captures both the fact AND the source</span></span>
+<span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="fu"><a href="../reference/rosetta_format.html">rosetta_format</a></span><span class="op">(</span><span class="va">stmt</span>, <span class="va">cited_tmpl</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+<table class="table">
+<thead><tr class="header">
+<th align="left">city</th>
+<th align="left">country</th>
+<th align="left">doi</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Kitchener</td>
+<td align="left">Canada</td>
+<td align="left">10.123/example</td>
+</tr></tbody>
+</table>
+</div>
+<div class="section level3">
+<h3 id="validation">Validation<a class="anchor" aria-label="anchor" href="#validation"></a>
+</h3>
+<p>Extracting data is only half the battle; we also need to ensure it is
+valid. rosettaR integrates with LinkML (via Python) to validate your
+extracted data against a schema.</p>
+<p>This ensures, for example, that an extracted “Age” is actually a
+number, or that a “Country” matches a specific list of allowed
+terms.</p>
+<div class="section level4">
+<h4 id="defining-a-schema">Defining a schema<a class="anchor" aria-label="anchor" href="#defining-a-schema"></a>
+</h4>
+<p>LinkML schemas are defined in YAML. Here is a simple example schema
+for our Apple data:</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">schema_yaml</span> <span class="op">&lt;-</span> <span class="st">"</span></span>
+<span><span class="st">id: [https://example.org/apple-schema](https://example.org/apple-schema)</span></span>
+<span><span class="st">name: AppleSchema</span></span>
+<span><span class="st">imports:</span></span>
+<span><span class="st">  - linkml:types</span></span>
+<span><span class="st">default_range: string</span></span>
+<span><span class="st"></span></span>
+<span><span class="st">classes:</span></span>
+<span><span class="st">  AppleObservation:</span></span>
+<span><span class="st">    attributes:</span></span>
+<span><span class="st">      object:</span></span>
+<span><span class="st">        required: true</span></span>
+<span><span class="st">      value:</span></span>
+<span><span class="st">        range: float  # Value must be a number!</span></span>
+<span><span class="st">      unit:</span></span>
+<span><span class="st">        range: string</span></span>
+<span><span class="st">"</span></span>
+<span><span class="co"># Save to a temporary file for this example</span></span>
+<span><span class="va">schema_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".yaml"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/writeLines.html" class="external-link">writeLines</a></span><span class="op">(</span><span class="va">schema_yaml</span>, <span class="va">schema_file</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level4">
+<h4 id="validating-data">Validating data<a class="anchor" aria-label="anchor" href="#validating-data"></a>
+</h4>
+<p>We can take the output from <code>rosetta_format</code> and check it
+against this schema.</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># 1. Good Data</span></span>
+<span><span class="va">good_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>object <span class="op">=</span> <span class="st">"Apple A"</span>, value <span class="op">=</span> <span class="fl">150.5</span>, unit <span class="op">=</span> <span class="st">"g"</span><span class="op">)</span></span>
+<span><span class="va">res_good</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rosetta_validate.html">rosetta_validate</a></span><span class="op">(</span><span class="va">good_data</span>, <span class="va">schema_file</span>, target_class <span class="op">=</span> <span class="st">"AppleObservation"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"Good Data is Valid:"</span>, <span class="va">res_good</span><span class="op">$</span><span class="va">ok</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># 2. Bad Data (Value is a string 'Heavy', not a float)</span></span>
+<span><span class="va">bad_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>object <span class="op">=</span> <span class="st">"Apple B"</span>, value <span class="op">=</span> <span class="st">"Heavy"</span>, unit <span class="op">=</span> <span class="st">"g"</span><span class="op">)</span></span>
+<span><span class="va">res_bad</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rosetta_validate.html">rosetta_validate</a></span><span class="op">(</span><span class="va">bad_data</span>, <span class="va">schema_file</span>, target_class <span class="op">=</span> <span class="st">"AppleObservation"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"Bad Data is Valid:"</span>, <span class="va">res_bad</span><span class="op">$</span><span class="va">ok</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="va">res_bad</span><span class="op">$</span><span class="va">ok</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">res_bad</span><span class="op">$</span><span class="va">issues</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre></div>
+<p>This validation step acts as a powerful gatekeeper, ensuring that
+only high-quality, structured data enters your final knowledge graph. #
+Under construction - much more to come! <strong>To do:</strong></p>
 <ul>
 <li>Add slot validation functionality</li>
 <li>Document multiple template/statement pairs and template library
 functionality</li>
 </ul>
+</div>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

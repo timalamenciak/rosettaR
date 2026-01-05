@@ -35,6 +35,8 @@ Approach](https://arxiv.org/abs/2407.20007) by Lars Vogt et al.
 
 ## Development tasks
 
+Build slot restrictions into template validation workflow.
+
 Implement slot restrictions and validation using LinkML (major).
 
 Debug and rework Shiny interface (major).

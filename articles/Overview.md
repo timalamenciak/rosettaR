@@ -203,24 +203,19 @@ headers. We have built a command that creates one (or loads one from a
 properly formatted CSV)
 
 ``` r
-templates <- init_library()
-knitr::kable(templates)
+# Create an empty library
+empty_lib <- init_library()
+knitr::kable(empty_lib)
 ```
 
 | TemplateID | templateText | metaTemplateID |
 |------------|--------------|----------------|
 
-This creates a blank data frame. You can add templates using the
-[`add_template()`](https://timalamenciak.github.io/rosettaR/reference/add_template.md)
-function, which is a pretty simple statement that adds a new template
-given a string and optional meta template ID (more on meta templates
-later).
-
-Let’s load a set of templates that we have included as an example. You
-can use [`read.csv()`](https://rdrr.io/r/utils/read.table.html) for
-this, but the
+Now let’s load a real set of templates that we have included as an
+example using the
 [`init_library()`](https://timalamenciak.github.io/rosettaR/reference/init_library.md)
-function also verifies that the template file is formatted properly:
+function. This function verifies that the template file is formatted
+properly:
 
 ``` r
 templates <- init_library(system.file("extdata/apple_templates.csv", package="rosettaR"))
@@ -233,39 +228,162 @@ knitr::kable(templates)
 |          2 | {{ object }} was grown in {{ location }} and picked {{ date_picked }} | NA             |
 |          3 | {{ object }} has the effect of making a human {{ magical_effect }}    | NA             |
 
-So now we have a data frame with 3 templates about apples. Let’s load
-some statements:
+Next, let’s load some statements. Note that these are just plain text
+strings:
 
 ``` r
 statements <- read.csv(system.file("extdata/apple_statements.csv", package="rosettaR"))
-knitr::kable(statements)
+head(statements)
+#>   TemplateID                                              statement
+#> 1          1                   Apple X has a weight of 2332.4 grams
+#> 2          1                       Apple Y has a weight of 23 stone
+#> 3          2           Apple X was grown in Germany and picked 2025
+#> 4          2 Apple Y was grown in Canada and picked January 4, 2025
+#> 5          3         Apple X has the effect of making a human happy
+#> 6          3        Apple Y has the effect of making a human sleepy
 ```
 
-| TemplateID | statement                                              |
-|-----------:|:-------------------------------------------------------|
-|          1 | Apple X has a weight of 2332.4 grams                   |
-|          1 | Apple Y has a weight of 23 stone                       |
-|          2 | Apple X was grown in Germany and picked 2025           |
-|          2 | Apple Y was grown in Canada and picked January 4, 2025 |
-|          3 | Apple X has the effect of making a human happy         |
-|          3 | Apple Y has the effect of making a human sleepy        |
+We can now use the
+[`rosetta_match()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_match.md)
+function. This “router” function automatically iterates through your
+statements, finds the matching template in your library, and extracts
+the data.
 
-Now we can convert each statement into a data frame:
+Unlike the simple rosetta_format which returns a wide dataframe (columns
+for variables), `rosetta_match` returns a Long Dataframe
+(Entity-Attribute-Value). This ensures that we don’t get a “sparse
+matrix” full of NAs when mixing different templates.
 
 ``` r
-results <- data.frame()
-merged <- dplyr::inner_join(statements, templates, by = "TemplateID")
-for (i in 1:nrow(merged)) {
-  row = merged[i, ]
+results <- rosetta_match(statements, templates)
+knitr::kable(head(results, 10))
+```
+
+| statement_id | statement_text | template_id | variable | value |
+|--------------|----------------|-------------|----------|-------|
+
+This output structure is ideal for building knowledge graphs, as every
+row corresponds to a single semantic fact (Subject-Predicate-Object).
+
+## Advanced templating
+
+Real-world data is rarely as clean as “Apple 1 has a weight of 100 g”.
+Often, statements include optional details or citations. `rosettaR`
+supports advanced template syntax to handle these cases.
+
+### Optional information in templates
+
+You can mark parts of a template as optional by enclosing them in square
+brackets `[...]`. If the text inside the brackets is missing from the
+statement, the parser will simply skip it (and return empty values for
+those slots) rather than throwing an error.
+
+``` r
+# Template with optional 'region' block
+tmpl <- "{{ city }} is located in {{ country }} [in the region of {{ region }}]"
+
+# Statement WITH region
+s1 <- "Kitchener is located in Canada in the region of Waterloo"
+knitr::kable(rosetta_format(s1, tmpl))
+```
+
+| city      | country | region   |
+|:----------|:--------|:---------|
+| Kitchener | Canada  | Waterloo |
+
+``` r
+
+# Statement WITHOUT region
+s2 <- "Kitchener is located in Canada"
+knitr::kable(rosetta_format(s2, tmpl))
+```
+
+| city      | country | region |
+|:----------|:--------|:-------|
+| Kitchener | Canada  |        |
+
+### Attribution and sources
+
+A key requirement for scientific knowledge graphs is attribution. You
+can include citation logic directly in your templates. This makes it
+explicit which statement is associated with which source.
+
+``` r
+# Template explicitly asking for a DOI
+cited_tmpl <- "{{ city }} is in {{ country }} according to {{ doi }}"
+
+# Input statement
+stmt <- "Kitchener is in Canada according to 10.123/example"
+
+# Result captures both the fact AND the source
+knitr::kable(rosetta_format(stmt, cited_tmpl))
+```
+
+| city      | country | doi            |
+|:----------|:--------|:---------------|
+| Kitchener | Canada  | 10.123/example |
+
+### Validation
+
+Extracting data is only half the battle; we also need to ensure it is
+valid. rosettaR integrates with LinkML (via Python) to validate your
+extracted data against a schema.
+
+This ensures, for example, that an extracted “Age” is actually a number,
+or that a “Country” matches a specific list of allowed terms.
+
+#### Defining a schema
+
+LinkML schemas are defined in YAML. Here is a simple example schema for
+our Apple data:
+
+``` r
+schema_yaml <- "
+id: [https://example.org/apple-schema](https://example.org/apple-schema)
+name: AppleSchema
+imports:
+  - linkml:types
+default_range: string
+
+classes:
+  AppleObservation:
+    attributes:
+      object:
+        required: true
+      value:
+        range: float  # Value must be a number!
+      unit:
+        range: string
+"
+# Save to a temporary file for this example
+schema_file <- tempfile(fileext = ".yaml")
+writeLines(schema_yaml, schema_file)
+```
+
+#### Validating data
+
+We can take the output from `rosetta_format` and check it against this
+schema.
+
+``` r
+# 1. Good Data
+good_data <- data.frame(object = "Apple A", value = 150.5, unit = "g")
+res_good <- rosetta_validate(good_data, schema_file, target_class = "AppleObservation")
+print(paste("Good Data is Valid:", res_good$ok))
+
+# 2. Bad Data (Value is a string 'Heavy', not a float)
+bad_data <- data.frame(object = "Apple B", value = "Heavy", unit = "g")
+res_bad <- rosetta_validate(bad_data, schema_file, target_class = "AppleObservation")
+
+print(paste("Bad Data is Valid:", res_bad$ok))
+if (!res_bad$ok) {
+  print(res_bad$issues)
 }
 ```
 
-This loop mashes all the results into one data frame. It looks something
-like this:
-
-## Under construction - much more to come!
-
-**To do:**
+This validation step acts as a powerful gatekeeper, ensuring that only
+high-quality, structured data enters your final knowledge graph. \#
+Under construction - much more to come! **To do:**
 
 - Add slot validation functionality
 - Document multiple template/statement pairs and template library

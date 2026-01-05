@@ -20,8 +20,12 @@
 - [`rosettaValidate()`](https://timalamenciak.github.io/rosettaR/reference/rosettaValidate.md)
   : Validate a Rosetta Statement using LinkML.
 - [`rosetta_format()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_format.md)
-  : Change the format of a statement
+  : Parse a Rosetta Statement
+- [`rosetta_match()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_match.md)
+  : Match Multiple Statements Against a Template Library
 - [`rosetta_shiny()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_shiny.md)
   : Rosetta Statements Shiny interface
 - [`rosetta_validate()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_validate.md)
   : Validate a data frame against a LinkML schema
+- [`run_rosetta_ui()`](https://timalamenciak.github.io/rosettaR/reference/run_rosetta_ui.md)
+  : Launch the RosettaR UI
