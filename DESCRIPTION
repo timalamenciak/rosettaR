@@ -32,7 +32,8 @@ Imports:
     DT,
     reticulate,
     jsonlite,
-    rlang
+    rlang,
+    digest
 Remotes:
   timalamenciak/linkmlR
 Depends: 

@@ -5,7 +5,7 @@
 #'
 #' @param s The input statement string.
 #' @param in_template The Rosetta template string.
-#' @param out_template The output format ('df' for dataframe, or a Jinja2 string).
+#' @param out_template The output format ('df' for dataframe, 'rdf' for generic Turtle, or a Jinja string).
 #'
 #' @export
 rosetta_format <- function(s, in_template, out_template = "df") {
@@ -27,14 +27,12 @@ rosetta_format <- function(s, in_template, out_template = "df") {
       start <- positions[i]
       len <- match_lengths[i]
 
-      # Capture literal text BEFORE this token
       if (start > last_pos) {
         literal <- substr(in_template, last_pos, start - 1)
         tokens[[length(tokens) + 1]] <- literal
         types <- c(types, "literal")
       }
 
-      # Capture the token
       token_str <- substr(in_template, start, start + len - 1)
       tokens[[length(tokens) + 1]] <- token_str
 
@@ -49,7 +47,6 @@ rosetta_format <- function(s, in_template, out_template = "df") {
       last_pos <- start + len
     }
 
-    # Capture trailing literal text
     if (last_pos <= nchar(in_template)) {
       tokens[[length(tokens) + 1]] <- substr(in_template, last_pos, nchar(in_template))
       types <- c(types, "literal")
@@ -65,14 +62,8 @@ rosetta_format <- function(s, in_template, out_template = "df") {
     val <- tokens[[i]]
 
     if (type == "literal") {
-      # 1. Escape special regex chars
       escaped <- gsub("([.|()\\^{}+$*?]|\\[|\\]|\\\\)", "\\\\\\1", val)
-
-      # 2. Make whitespace flexible
-      # Replace literal spaces with \s* (zero or more whitespace)
-      # This fixes the "A [B] C" vs "A C" double-space issue
       escaped <- gsub("\\s+", "\\\\s*", escaped)
-
       final_regex <- paste0(final_regex, escaped)
 
     } else if (type == "bracket_open") {
@@ -87,9 +78,7 @@ rosetta_format <- function(s, in_template, out_template = "df") {
       clean_name <- gsub("^\\?\\s*", "", raw_name)
       var_names <- c(var_names, clean_name)
 
-      # Logic for greedy/lazy matching
       is_last_token <- (i == length(tokens))
-
       if (is_last_token) {
         final_regex <- paste0(final_regex, if(is_optional_var) "(.*)" else "(.+)")
       } else {
@@ -111,10 +100,58 @@ rosetta_format <- function(s, in_template, out_template = "df") {
   values_named <- as.list(captured_values)
   names(values_named) <- var_names
 
+  # --- Step 4: Output Rendering ---
+
+  # NEW: Generate a Deterministic ID for this statement
+  # We use MD5 hash of the statement text to ensure consistency
+  # (Requires 'digest' package, or we can use a basic R workaround)
+  if (requireNamespace("digest", quietly = TRUE)) {
+    stmt_hash <- digest::digest(s, algo = "md5")
+  } else {
+    # Fallback if digest isn't installed: simple random string (not ideal for determinism)
+    stmt_hash <- as.character(as.hexmode(as.integer(Sys.time())))
+  }
+  stmt_id <- paste0("urn:uuid:", stmt_hash)
+
   if (out_template == "df") {
     rendered <- as.data.frame(values_named, stringsAsFactors = FALSE)
+
+  } else if (out_template == "rdf") {
+
+    # BUILT-IN RSO TEMPLATE
+    # Now uses <{{ statement_id }}> instead of []
+    rso_template_str <- '
+@prefix rso: <http://purl.obolibrary.org/obo/RSO_> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<{{ statement_id }}> a rso:Statement ;
+    rso:has_content "{{ source_text }}" ;
+    {% for key, value in all_vars %}
+    rso:has_variable [
+        a rso:Variable ;
+        rso:variable_name "{{ key }}" ;
+        rso:variable_value "{{ value }}"
+    ] ;
+    {% endfor %}
+.
+'
+    rendered <- jinjar::render(
+      rso_template_str,
+      all_vars = values_named,
+      source_text = s,
+      statement_id = stmt_id, # <--- Passed here
+      !!!values_named
+    )
+
   } else {
-    rendered <- jinjar::render(out_template, !!!values_named)
+    # Custom Jinja Template
+    rendered <- jinjar::render(
+      out_template,
+      all_vars = values_named,
+      source_text = s,
+      statement_id = stmt_id,
+      !!!values_named
+    )
   }
 
   return(rendered)

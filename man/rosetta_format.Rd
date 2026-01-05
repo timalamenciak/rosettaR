@@ -11,7 +11,7 @@ rosetta_format(s, in_template, out_template = "df")
 
 \item{in_template}{The Rosetta template string.}
 
-\item{out_template}{The output format ('df' for dataframe, or a Jinja2 string).}
+\item{out_template}{The output format ('df' for dataframe, 'rdf' for generic Turtle, or a Jinja string).}
 }
 \description{
 Converts a plain language statement into a structured dataframe using a template.
