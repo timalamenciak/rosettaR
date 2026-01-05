@@ -25,6 +25,8 @@
   : Match Multiple Statements Against a Template Library
 - [`rosetta_shiny()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_shiny.md)
   : Rosetta Statements Shiny interface
+- [`rosetta_triplify()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_triplify.md)
+  : Batch Convert Statements to RSO RDF
 - [`rosetta_validate()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_validate.md)
   : Validate a data frame against a LinkML schema
 - [`run_rosetta_ui()`](https://timalamenciak.github.io/rosettaR/reference/run_rosetta_ui.md)

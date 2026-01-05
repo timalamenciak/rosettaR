@@ -21,4 +21,5 @@ rosetta_format(s, in_template, out_template = "df")
 
 - out_template:
 
-  The output format ('df' for dataframe, or a Jinja2 string).
+  The output format ('df' for dataframe, 'rdf' for generic Turtle, or a
+  Jinja string).
