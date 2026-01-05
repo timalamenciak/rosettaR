@@ -1,58 +1,121 @@
-#' Change the format of a statement
+#' Parse a Rosetta Statement
 #'
-#' @param s A statement in the form of a string.
-#' @param in_template A Rosetta Template to interpret the string.
-#' @param out_template A Jinja template for the desired output. (Optional; if
-#' not provided, a dataframe is returned)
+#' Converts a plain language statement into a structured dataframe using a template.
+#' Supports variables {{ var }} and optional blocks [ ... ].
 #'
-#' @returns A string rendered from the Jinja output template and the Rosetta input template.
+#' @param s The input statement string.
+#' @param in_template The Rosetta template string.
+#' @param out_template The output format ('df' for dataframe, or a Jinja2 string).
+#'
 #' @export
-#'
-#' @examples
-#' statement <- "Kitchener is located in Canada"
-#' in_template <- "{{ city }} is located in {{ country }}"
-#' out_template <- "CITY,COUNTRY,,{{ city }},{{ country }}"
-#' df <- rosetta_format(statement, in_template, out_template)
 rosetta_format <- function(s, in_template, out_template = "df") {
-  # 1. Extract variable names from template (everything between {{ }})
-  var_pattern <- "\\{\\{\\s*([^}]+?)\\s*\\}\\}"
-  var_names <- regmatches(in_template, gregexpr(var_pattern, in_template, perl = TRUE))[[1]]
-  var_names <- gsub("\\{\\{\\s*|\\s*\\}\\}", "", var_names)
 
-  # 2. Construct Safe Regex Pattern
-  # We need to escape special regex characters (like $, ., ?) in the template text,
-  # but NOT escape the {{ variables }} themselves.
+  # --- Step 1: Tokenize the Template ---
+  token_pattern <- "(\\{\\{.*?\\}\\}|\\[|\\])"
+  positions <- gregexpr(token_pattern, in_template, perl = TRUE)[[1]]
 
-  # Step A: Replace {{ variables }} with a safe placeholder
-  # We use a unique string that won't confuse the regex parser
-  placeholder <- "___ROSETTA_VAR_PLACEHOLDER___"
-  temp_pattern <- gsub("\\{\\{\\s*[^}]+?\\s*\\}\\}", placeholder, in_template)
+  if (positions[1] == -1) {
+    tokens <- list(in_template)
+    types <- "literal"
+  } else {
+    match_lengths <- attr(positions, "match.length")
+    tokens <- list()
+    types <- character()
+    last_pos <- 1
 
-  # Step B: Escape all special regex characters in the remaining text
-  # This pattern matches: . | ( ) [ ] { } ^ $ * + ? \
-  # We replace them with a double backslash version (e.g., "." becomes "\.")
-  temp_pattern <- gsub("([.|()\\^{}+$*?]|\\[|\\]|\\\\)", "\\\\\\1", temp_pattern)
+    for (i in seq_along(positions)) {
+      start <- positions[i]
+      len <- match_lengths[i]
 
-  # Step C: Replace the placeholder with the capture group (.*)
-  regex_pattern <- gsub(placeholder, "(.*)", temp_pattern, fixed = TRUE)
+      # Capture literal text BEFORE this token
+      if (start > last_pos) {
+        literal <- substr(in_template, last_pos, start - 1)
+        tokens[[length(tokens) + 1]] <- literal
+        types <- c(types, "literal")
+      }
 
-  # 3. Extract values from the input string
-  matches <- regmatches(s, regexec(regex_pattern, s, perl = TRUE))[[1]]
+      # Capture the token
+      token_str <- substr(in_template, start, start + len - 1)
+      tokens[[length(tokens) + 1]] <- token_str
 
-  # Check if match was successful
+      if (token_str == "[") {
+        types <- c(types, "bracket_open")
+      } else if (token_str == "]") {
+        types <- c(types, "bracket_close")
+      } else {
+        types <- c(types, "variable")
+      }
+
+      last_pos <- start + len
+    }
+
+    # Capture trailing literal text
+    if (last_pos <= nchar(in_template)) {
+      tokens[[length(tokens) + 1]] <- substr(in_template, last_pos, nchar(in_template))
+      types <- c(types, "literal")
+    }
+  }
+
+  # --- Step 2: Build Regex ---
+  final_regex <- "^"
+  var_names <- character()
+
+  for (i in seq_along(tokens)) {
+    type <- types[i]
+    val <- tokens[[i]]
+
+    if (type == "literal") {
+      # 1. Escape special regex chars
+      escaped <- gsub("([.|()\\^{}+$*?]|\\[|\\]|\\\\)", "\\\\\\1", val)
+
+      # 2. Make whitespace flexible
+      # Replace literal spaces with \s* (zero or more whitespace)
+      # This fixes the "A [B] C" vs "A C" double-space issue
+      escaped <- gsub("\\s+", "\\\\s*", escaped)
+
+      final_regex <- paste0(final_regex, escaped)
+
+    } else if (type == "bracket_open") {
+      final_regex <- paste0(final_regex, "(?:")
+
+    } else if (type == "bracket_close") {
+      final_regex <- paste0(final_regex, ")?")
+
+    } else if (type == "variable") {
+      raw_name <- gsub("\\{\\{\\s*|\\s*\\}\\}", "", val)
+      is_optional_var <- grepl("^\\?", raw_name)
+      clean_name <- gsub("^\\?\\s*", "", raw_name)
+      var_names <- c(var_names, clean_name)
+
+      # Logic for greedy/lazy matching
+      is_last_token <- (i == length(tokens))
+
+      if (is_last_token) {
+        final_regex <- paste0(final_regex, if(is_optional_var) "(.*)" else "(.+)")
+      } else {
+        final_regex <- paste0(final_regex, if(is_optional_var) "(.*?)" else "(.+?)")
+      }
+    }
+  }
+
+  final_regex <- paste0(final_regex, "$")
+
+  # --- Step 3: Execute ---
+  matches <- regmatches(s, regexec(final_regex, s, perl = TRUE))[[1]]
+
   if (length(matches) < 2) {
     stop("Error: Input string does not match template pattern")
   }
 
-  # First element is the full match, rest are capture groups
-  values <- matches[-1]
-  values_named <- as.list(values)
+  captured_values <- matches[-1]
+  values_named <- as.list(captured_values)
   names(values_named) <- var_names
 
   if (out_template == "df") {
-    rendered <- as.data.frame(values_named)
+    rendered <- as.data.frame(values_named, stringsAsFactors = FALSE)
   } else {
     rendered <- jinjar::render(out_template, !!!values_named)
   }
+
   return(rendered)
 }
