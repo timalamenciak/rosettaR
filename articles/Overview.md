@@ -57,9 +57,9 @@ Here we can turn it into a data frame:
 knitr::kable(rosetta_format(apple_statement, apple_template))
 ```
 
-| object  | quality | value  | unit  |
-|:--------|:--------|:-------|:------|
-| Apple X | weight  | 241.68 | grams |
+| object  | quality | value | unit        |
+|:--------|:--------|:------|:------------|
+| Apple X | weight  | 2     | 41.68 grams |
 
 That’s a pretty straightforward usage, but we can get more complicated
 with it. Here we can transform the statement into a CSV, where the slots
@@ -67,7 +67,7 @@ become column headers and the values go in the columns:
 
 ``` r
 rosetta_format(apple_statement, apple_template, "Object,Quality,Value,Unit\n{{ object }},{{ quality }},{{ value }},{{ unit }}")
-#> [1] "Object,Quality,Value,Unit\nApple X,weight,241.68,grams"
+#> [1] "Object,Quality,Value,Unit\nApple X,weight,2,41.68 grams"
 ```
 
 We’re still in pretty simple territory here, so let’s get a little more
@@ -180,7 +180,7 @@ ex:appleweightDatum
 
 ex:appleweightValueSpec
     rdf:type obi:0001938 ;                  # OBI:scalar value specification
-    iao:has_measurement_value "241.68"^^xsd:double ;
+    iao:has_measurement_value "2"^^xsd:double ;
     iao:has_measurement_unit_label uo:0000021 .
 
 ############################################################
@@ -188,7 +188,7 @@ ex:appleweightValueSpec
 ############################################################
 
 uo:0000021
-    rdf:type uo:grams .
+    rdf:type uo:41.68 grams .
 ```
 
 ## Processing multiple statements
