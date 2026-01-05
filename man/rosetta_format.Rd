@@ -2,27 +2,18 @@
 % Please edit documentation in R/rosetta_format.R
 \name{rosetta_format}
 \alias{rosetta_format}
-\title{Change the format of a statement}
+\title{Parse a Rosetta Statement}
 \usage{
 rosetta_format(s, in_template, out_template = "df")
 }
 \arguments{
-\item{s}{A statement in the form of a string.}
+\item{s}{The input statement string.}
 
-\item{in_template}{A Rosetta Template to interpret the string.}
+\item{in_template}{The Rosetta template string.}
 
-\item{out_template}{A Jinja template for the desired output. (Optional; if
-not provided, a dataframe is returned)}
-}
-\value{
-A string rendered from the Jinja output template and the Rosetta input template.
+\item{out_template}{The output format ('df' for dataframe, or a Jinja2 string).}
 }
 \description{
-Change the format of a statement
-}
-\examples{
-statement <- "Kitchener is located in Canada"
-in_template <- "{{ city }} is located in {{ country }}"
-out_template <- "CITY,COUNTRY,,{{ city }},{{ country }}"
-df <- rosetta_format(statement, in_template, out_template)
+Converts a plain language statement into a structured dataframe using a template.
+Supports variables \{\{ var \}\} and optional blocks \link{ ... }.
 }

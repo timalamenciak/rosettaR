@@ -1,7 +1,7 @@
 #' Parse a Rosetta Statement
 #'
 #' Converts a plain language statement into a structured dataframe using a template.
-#' Supports variables {{ var }} and optional blocks [ ... ].
+#' Supports variables \{\{ var \}\} and optional blocks [ ... ].
 #'
 #' @param s The input statement string.
 #' @param in_template The Rosetta template string.

@@ -1,7 +1,7 @@
 Package: rosettaR
 Type: Package
 Title: Turn Plain Language Statements Into RDF, CSV, or Anything
-Version: 0.0.1
+Version: 0.1.0
 Authors@R: c(
     person(
       "Tim", "Alamenciak",
