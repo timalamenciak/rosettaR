@@ -224,7 +224,7 @@ writeLines(schema_yaml, schema_file)
 
 We can take the output from `rosetta_format` and check it against this schema.
 
-```{r validate}
+```{r validate, eval=reticulate::py_module_available("linkml")}
 # 1. Good Data
 good_data <- data.frame(object = "Apple A", value = 150.5, unit = "g")
 res_good <- rosetta_validate(good_data, schema_file, target_class = "AppleObservation")
