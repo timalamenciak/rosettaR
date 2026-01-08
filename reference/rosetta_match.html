@@ -52,7 +52,7 @@ a library of templates. Returns a long-format dataframe.</p>
 
 
 <dl><dt id="arg-statements">statements<a class="anchor" aria-label="anchor" href="#arg-statements"></a></dt>
-<dd><p>A character vector of plain language statements.</p></dd>
+<dd><p>A character vector of plain language statements, OR a dataframe containing a column of statements.</p></dd>
 
 
 <dt id="arg-templates">templates<a class="anchor" aria-label="anchor" href="#arg-templates"></a></dt>
@@ -65,6 +65,20 @@ a library of templates. Returns a long-format dataframe.</p>
     <p>A data.frame in long format with columns: statement_id, statement_text, template_id, variable, value.</p>
     </div>
 
+    <div class="section level2">
+    <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span>   <span class="co"># Vector Input</span></span></span>
+<span class="r-in"><span>   <span class="va">statements</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Kitchener is in Canada"</span>, <span class="st">"Paris is in France"</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>   <span class="co"># Dataframe Input (e.g. from read.csv)</span></span></span>
+<span class="r-in"><span>   <span class="co"># df &lt;- read.csv("my_statements.csv")</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>   <span class="va">templates</span> <span class="op">&lt;-</span> <span class="fu"><a href="init_library.html">init_library</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_templates.csv"</span>, package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="va">results</span> <span class="op">&lt;-</span> <span class="fu">rosetta_match</span><span class="op">(</span><span class="va">statements</span>, <span class="va">templates</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+</code></pre></div>
+    </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
 

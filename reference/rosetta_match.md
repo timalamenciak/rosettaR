@@ -13,7 +13,8 @@ rosetta_match(statements, templates)
 
 - statements:
 
-  A character vector of plain language statements.
+  A character vector of plain language statements, OR a dataframe
+  containing a column of statements.
 
 - templates:
 
@@ -25,3 +26,18 @@ rosetta_match(statements, templates)
 
 A data.frame in long format with columns: statement_id, statement_text,
 template_id, variable, value.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+   # Vector Input
+   statements <- c("Kitchener is in Canada", "Paris is in France")
+
+   # Dataframe Input (e.g. from read.csv)
+   # df <- read.csv("my_statements.csv")
+
+   templates <- init_library(system.file("extdata/apple_templates.csv", package="rosettaR"))
+   results <- rosetta_match(statements, templates)
+} # }
+```

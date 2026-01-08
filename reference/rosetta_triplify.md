@@ -24,3 +24,13 @@ rosetta_triplify(statements, templates)
 ## Value
 
 A single character string containing the full RDF document.
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+  # (Use the same setup as above)
+  ttl <- rosetta_triplify(statements, templates)
+  cat(ttl)
+} # }
+```

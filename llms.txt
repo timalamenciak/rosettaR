@@ -73,8 +73,6 @@ review](https://ropensci.org/software-review/).
   : Change a data frame into a series of statements based on templates.
 - [`init_library()`](https://timalamenciak.github.io/rosettaR/reference/init_library.md)
   : Load a set of Rosetta templates into a dataframe.
-- [`rosettaValidate()`](https://timalamenciak.github.io/rosettaR/reference/rosettaValidate.md)
-  : Validate a Rosetta Statement using LinkML.
 - [`rosetta_format()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_format.md)
   : Parse a Rosetta Statement
 - [`rosetta_match()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_match.md)

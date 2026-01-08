@@ -57,9 +57,9 @@ Here we can turn it into a data frame:
 knitr::kable(rosetta_format(apple_statement, apple_template))
 ```
 
-| object  | quality | value | unit        |
-|:--------|:--------|:------|:------------|
-| Apple X | weight  | 2     | 41.68 grams |
+| object  | quality | value  | unit  |
+|:--------|:--------|:-------|:------|
+| Apple X | weight  | 241.68 | grams |
 
 That’s a pretty straightforward usage, but we can get more complicated
 with it. Here we can transform the statement into a CSV, where the slots
@@ -67,7 +67,7 @@ become column headers and the values go in the columns:
 
 ``` r
 rosetta_format(apple_statement, apple_template, "Object,Quality,Value,Unit\n{{ object }},{{ quality }},{{ value }},{{ unit }}")
-#> [1] "Object,Quality,Value,Unit\nApple X,weight,2,41.68 grams"
+#> [1] "Object,Quality,Value,Unit\nApple X,weight,241.68,grams"
 ```
 
 We’re still in pretty simple territory here, so let’s get a little more
@@ -180,7 +180,7 @@ ex:appleweightDatum
 
 ex:appleweightValueSpec
     rdf:type obi:0001938 ;                  # OBI:scalar value specification
-    iao:has_measurement_value "2"^^xsd:double ;
+    iao:has_measurement_value "241.68"^^xsd:double ;
     iao:has_measurement_unit_label uo:0000021 .
 
 ############################################################
@@ -188,7 +188,7 @@ ex:appleweightValueSpec
 ############################################################
 
 uo:0000021
-    rdf:type uo:41.68 grams .
+    rdf:type uo:grams .
 ```
 
 ## Processing multiple statements
@@ -259,8 +259,18 @@ results <- rosetta_match(statements, templates)
 knitr::kable(head(results, 10))
 ```
 
-| statement_id | statement_text | template_id | variable | value |
-|--------------|----------------|-------------|----------|-------|
+| statement_id | statement_text                               | template_id | variable | value   |
+|-------------:|:---------------------------------------------|------------:|:---------|:--------|
+|            1 | Apple X has a weight of 2332.4 grams         |           1 | object   | Apple X |
+|            1 | Apple X has a weight of 2332.4 grams         |           1 | quality  | weight  |
+|            1 | Apple X has a weight of 2332.4 grams         |           1 | value    | 2332.4  |
+|            1 | Apple X has a weight of 2332.4 grams         |           1 | unit     | grams   |
+|            2 | Apple Y has a weight of 23 stone             |           1 | object   | Apple Y |
+|            2 | Apple Y has a weight of 23 stone             |           1 | quality  | weight  |
+|            2 | Apple Y has a weight of 23 stone             |           1 | value    | 23      |
+|            2 | Apple Y has a weight of 23 stone             |           1 | unit     | stone   |
+|            3 | Apple X was grown in Germany and picked 2025 |           2 | object   | Apple X |
+|            3 | Apple X was grown in Germany and picked 2025 |           2 | location | Germany |
 
 This output structure is ideal for building knowledge graphs, as every
 row corresponds to a single semantic fact (Subject-Predicate-Object).
@@ -388,3 +398,5 @@ Under construction - much more to come! **To do:**
 - Add slot validation functionality
 - Document multiple template/statement pairs and template library
   functionality
+- Fix regex in Rosetta_format
+- Fix rosetta_match function

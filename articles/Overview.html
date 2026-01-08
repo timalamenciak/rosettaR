@@ -120,8 +120,8 @@ multiple representations.</p>
 <tbody><tr class="odd">
 <td align="left">Apple X</td>
 <td align="left">weight</td>
-<td align="left">2</td>
-<td align="left">41.68 grams</td>
+<td align="left">241.68</td>
+<td align="left">grams</td>
 </tr></tbody>
 </table>
 <p>That’s a pretty straightforward usage, but we can get more
@@ -130,7 +130,7 @@ where the slots become column headers and the values go in the
 columns:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/rosetta_format.html">rosetta_format</a></span><span class="op">(</span><span class="va">apple_statement</span>, <span class="va">apple_template</span>, <span class="st">"Object,Quality,Value,Unit\n{{ object }},{{ quality }},{{ value }},{{ unit }}"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "Object,Quality,Value,Unit\nApple X,weight,2,41.68 grams"</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] "Object,Quality,Value,Unit\nApple X,weight,241.68,grams"</span></span></code></pre></div>
 <p>We’re still in pretty simple territory here, so let’s get a little
 more complex. The original idea behind Rosetta Statements was to make it
 easier to create knowledge graphs in RDF. So here is an example of an
@@ -236,7 +236,7 @@ what happens:</p>
 <span id="cb6-42"><a href="#cb6-42" tabindex="-1"></a></span>
 <span id="cb6-43"><a href="#cb6-43" tabindex="-1"></a>ex<span class="sc">:</span>appleweightValueSpec</span>
 <span id="cb6-44"><a href="#cb6-44" tabindex="-1"></a>    rdf<span class="sc">:</span>type obi<span class="sc">:</span><span class="dv">0001938</span> ;                  <span class="co"># OBI:scalar value specification</span></span>
-<span id="cb6-45"><a href="#cb6-45" tabindex="-1"></a>    iao<span class="sc">:</span>has_measurement_value <span class="st">"2"</span><span class="sc">^</span><span class="er">^</span>xsd<span class="sc">:</span>double ;</span>
+<span id="cb6-45"><a href="#cb6-45" tabindex="-1"></a>    iao<span class="sc">:</span>has_measurement_value <span class="st">"241.68"</span><span class="sc">^</span><span class="er">^</span>xsd<span class="sc">:</span>double ;</span>
 <span id="cb6-46"><a href="#cb6-46" tabindex="-1"></a>    iao<span class="sc">:</span>has_measurement_unit_label uo<span class="sc">:</span><span class="dv">0000021</span> .</span>
 <span id="cb6-47"><a href="#cb6-47" tabindex="-1"></a></span>
 <span id="cb6-48"><a href="#cb6-48" tabindex="-1"></a><span class="do">############################################################</span></span>
@@ -244,7 +244,7 @@ what happens:</p>
 <span id="cb6-50"><a href="#cb6-50" tabindex="-1"></a><span class="do">############################################################</span></span>
 <span id="cb6-51"><a href="#cb6-51" tabindex="-1"></a></span>
 <span id="cb6-52"><a href="#cb6-52" tabindex="-1"></a>uo<span class="sc">:</span><span class="dv">0000021</span></span>
-<span id="cb6-53"><a href="#cb6-53" tabindex="-1"></a>    rdf<span class="sc">:</span>type uo<span class="sc">:</span><span class="fl">41.68</span> grams .</span></code></pre></div>
+<span id="cb6-53"><a href="#cb6-53" tabindex="-1"></a>    rdf<span class="sc">:</span>type uo<span class="sc">:</span>grams .</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="processing-multiple-statements">Processing multiple statements<a class="anchor" aria-label="anchor" href="#processing-multiple-statements"></a>
@@ -329,14 +329,92 @@ Dataframe (Entity-Attribute-Value). This ensures that we don’t get a
 <code class="sourceCode R"><span><span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rosetta_match.html">rosetta_match</a></span><span class="op">(</span><span class="va">statements</span>, <span class="va">templates</span><span class="op">)</span></span>
 <span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">results</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <table class="table">
+<colgroup>
+<col width="14%">
+<col width="51%">
+<col width="13%">
+<col width="10%">
+<col width="9%">
+</colgroup>
 <thead><tr class="header">
 <th align="right">statement_id</th>
 <th align="left">statement_text</th>
-<th align="left">template_id</th>
+<th align="right">template_id</th>
 <th align="left">variable</th>
 <th align="left">value</th>
 </tr></thead>
-<tbody></tbody>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Apple X has a weight of 2332.4 grams</td>
+<td align="right">1</td>
+<td align="left">object</td>
+<td align="left">Apple X</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="left">Apple X has a weight of 2332.4 grams</td>
+<td align="right">1</td>
+<td align="left">quality</td>
+<td align="left">weight</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Apple X has a weight of 2332.4 grams</td>
+<td align="right">1</td>
+<td align="left">value</td>
+<td align="left">2332.4</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="left">Apple X has a weight of 2332.4 grams</td>
+<td align="right">1</td>
+<td align="left">unit</td>
+<td align="left">grams</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">Apple Y has a weight of 23 stone</td>
+<td align="right">1</td>
+<td align="left">object</td>
+<td align="left">Apple Y</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Apple Y has a weight of 23 stone</td>
+<td align="right">1</td>
+<td align="left">quality</td>
+<td align="left">weight</td>
+</tr>
+<tr class="odd">
+<td align="right">2</td>
+<td align="left">Apple Y has a weight of 23 stone</td>
+<td align="right">1</td>
+<td align="left">value</td>
+<td align="left">23</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Apple Y has a weight of 23 stone</td>
+<td align="right">1</td>
+<td align="left">unit</td>
+<td align="left">stone</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Apple X was grown in Germany and picked 2025</td>
+<td align="right">2</td>
+<td align="left">object</td>
+<td align="left">Apple X</td>
+</tr>
+<tr class="even">
+<td align="right">3</td>
+<td align="left">Apple X was grown in Germany and picked 2025</td>
+<td align="right">2</td>
+<td align="left">location</td>
+<td align="left">Germany</td>
+</tr>
+</tbody>
 </table>
 <p>This output structure is ideal for building knowledge graphs, as
 every row corresponds to a single semantic fact
@@ -483,6 +561,8 @@ Under construction - much more to come! <strong>To do:</strong></p>
 <li>Add slot validation functionality</li>
 <li>Document multiple template/statement pairs and template library
 functionality</li>
+<li>Fix regex in Rosetta_format</li>
+<li>Fix rosetta_match function</li>
 </ul>
 </div>
 </div>
