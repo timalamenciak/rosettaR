@@ -7,7 +7,7 @@
 rosetta_match(statements, templates)
 }
 \arguments{
-\item{statements}{A character vector of plain language statements.}
+\item{statements}{A character vector of plain language statements, OR a dataframe containing a column of statements.}
 
 \item{templates}{A dataframe created by \code{init_library()}, containing
 'TemplateID' and 'templateText' columns.}
@@ -18,4 +18,16 @@ A data.frame in long format with columns: statement_id, statement_text, template
 \description{
 Iterates through a vector of statements and attempts to match them against
 a library of templates. Returns a long-format dataframe.
+}
+\examples{
+\dontrun{
+   # Vector Input
+   statements <- c("Kitchener is in Canada", "Paris is in France")
+
+   # Dataframe Input (e.g. from read.csv)
+   # df <- read.csv("my_statements.csv")
+
+   templates <- init_library(system.file("extdata/apple_templates.csv", package="rosettaR"))
+   results <- rosetta_match(statements, templates)
+}
 }

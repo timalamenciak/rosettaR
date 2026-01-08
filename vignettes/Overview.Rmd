@@ -246,3 +246,5 @@ This validation step acts as a powerful gatekeeper, ensuring that only high-qual
 
 - Add slot validation functionality
 - Document multiple template/statement pairs and template library functionality
+- Fix regex in Rosetta_format
+- Fix rosetta_match function

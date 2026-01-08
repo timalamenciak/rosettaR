@@ -28,7 +28,6 @@ Imports:
     jinjar,
     shiny,
     utils,
-    linkmlR,
     DT,
     reticulate,
     jsonlite,

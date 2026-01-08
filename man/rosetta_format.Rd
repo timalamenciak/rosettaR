@@ -15,5 +15,5 @@ rosetta_format(s, in_template, out_template = "df")
 }
 \description{
 Converts a plain language statement into a structured dataframe using a template.
-Supports variables \{\{ var \}\} and optional blocks \link{ ... }.
+Supports variables {{ var }} and optional blocks \link{ ... }.
 }

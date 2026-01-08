@@ -18,3 +18,10 @@ A single character string containing the full RDF document.
 Converts a list of statements into a single, cohesive Turtle (TTL) string
 using the Rosetta Statement Ontology (RSO). Handles prefix management automatically.
 }
+\examples{
+\dontrun{
+  # (Use the same setup as above)
+  ttl <- rosetta_triplify(statements, templates)
+  cat(ttl)
+}
+}

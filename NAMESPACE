@@ -3,7 +3,6 @@
 export(add_template)
 export(df_to_statements)
 export(init_library)
-export(rosettaValidate)
 export(rosetta_format)
 export(rosetta_match)
 export(rosetta_shiny)

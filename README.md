@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/timalamenciak/rosettaR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/timalamenciak/rosettaR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of rosettaR is to provide a series of tools to work with

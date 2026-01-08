@@ -63,7 +63,19 @@ rosetta_format <- function(s, in_template, out_template = "df") {
 
     if (type == "literal") {
       escaped <- gsub("([.|()\\^{}+$*?]|\\[|\\]|\\\\)", "\\\\\\1", val)
-      escaped <- gsub("\\s+", "\\\\s*", escaped)
+
+      # INTELLIGENT WHITESPACE HANDLING
+      # Check the NEXT token type (if it exists)
+      next_type <- if (i < length(tokens)) types[i+1] else "end_of_string"
+
+      if (next_type == "bracket_open" || next_type == "end_of_string") {
+        # Lenient: If followed by an optional block or end of string, spaces are optional
+        escaped <- gsub("\\s+", "\\\\s*", escaped)
+      } else {
+        # Strict: Otherwise (e.g. between variables), spaces are mandatory to prevent merging
+        escaped <- gsub("\\s+", "\\\\s+", escaped)
+      }
+
       final_regex <- paste0(final_regex, escaped)
 
     } else if (type == "bracket_open") {
@@ -97,18 +109,15 @@ rosetta_format <- function(s, in_template, out_template = "df") {
   }
 
   captured_values <- matches[-1]
+  captured_values <- lapply(captured_values, trimws) # Clean up capture
   values_named <- as.list(captured_values)
   names(values_named) <- var_names
 
   # --- Step 4: Output Rendering ---
 
-  # NEW: Generate a Deterministic ID for this statement
-  # We use MD5 hash of the statement text to ensure consistency
-  # (Requires 'digest' package, or we can use a basic R workaround)
   if (requireNamespace("digest", quietly = TRUE)) {
     stmt_hash <- digest::digest(s, algo = "md5")
   } else {
-    # Fallback if digest isn't installed: simple random string (not ideal for determinism)
     stmt_hash <- as.character(as.hexmode(as.integer(Sys.time())))
   }
   stmt_id <- paste0("urn:uuid:", stmt_hash)
@@ -117,9 +126,6 @@ rosetta_format <- function(s, in_template, out_template = "df") {
     rendered <- as.data.frame(values_named, stringsAsFactors = FALSE)
 
   } else if (out_template == "rdf") {
-
-    # BUILT-IN RSO TEMPLATE
-    # Now uses <{{ statement_id }}> instead of []
     rso_template_str <- '
 @prefix rso: <http://purl.obolibrary.org/obo/RSO_> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -139,12 +145,11 @@ rosetta_format <- function(s, in_template, out_template = "df") {
       rso_template_str,
       all_vars = values_named,
       source_text = s,
-      statement_id = stmt_id, # <--- Passed here
+      statement_id = stmt_id,
       !!!values_named
     )
 
   } else {
-    # Custom Jinja Template
     rendered <- jinjar::render(
       out_template,
       all_vars = values_named,

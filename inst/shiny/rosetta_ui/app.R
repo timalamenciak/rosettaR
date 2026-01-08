@@ -68,7 +68,8 @@ server <- function(input, output, session) {
 
   # 2. Dynamic Class Selector (reads schema to find classes)
   # Note: This is a placeholder. For a full implementation, you'd parse the YAML
-  # to find class names. For now, we just let them type it or default to 'Person'.
+  # to find class names. For now,
+  # we just let them type it or default to 'Person'.
   output$class_selector <- renderUI({
     req(input$schema_file)
     textInput("target_class", "Target Class", value = "Person")

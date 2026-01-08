@@ -4,7 +4,8 @@
 \name{apple_template}
 \alias{apple_template}
 \title{Apple Rosetta Statement Example
-This is an example of a template to describe the weight of a particular apple.}
+This is an example of a template to describe the
+weight of a particular apple.}
 \format{
 \subsection{\code{apple_template}}{
 
@@ -16,7 +17,8 @@ apple_template
 }
 \description{
 Apple Rosetta Statement Example
-This is an example of a template to describe the weight of a particular apple.
+This is an example of a template to describe the
+weight of a particular apple.
 }
 \references{
 \url{https://arxiv.org/pdf/2407.20007}

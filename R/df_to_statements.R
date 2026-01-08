@@ -26,7 +26,7 @@ df_to_statements <- function(df, templates) {
   }
   df_names <- colnames(df)
   TemplateID <- NULL #this fixes a silly warning potentially
-  for (i in 1:nrow(df)) {
+  for (i in seq_len(nrow(df))) {
     row <- df[i,]
     template <- dplyr::filter(templates, TemplateID == row$TemplateID)
     statement <- jinjar::render(template$templateText, !!!as.list(row))

@@ -19,3 +19,30 @@ A list containing \code{ok} (boolean) and \code{issues} (list of errors).
 \description{
 Validate a data frame against a LinkML schema
 }
+\examples{
+\dontrun{
+  # Create a YAML schema for this example.
+  schema_yaml <- "id: https://example.org/apple-schema
+  name: AppleSchema
+   imports:
+   - linkml:types
+   default_range: string
+ classes:
+   AppleObservation:
+    attributes:
+      object:
+        required: true
+      value:
+        range: float  # Value must be a number!
+      unit:
+        range: string"
+
+# Save to a temporary file for this example
+schema_file <- tempfile(fileext = ".yaml")
+writeLines(schema_yaml, schema_file)# (Use the same setup as above)
+
+good_data <- data.frame(object = "Apple A", value = 150.5, unit = "g")
+res_good <- rosetta_validate(good_data, schema_file, target_class = "AppleObservation")
+print(paste("Good Data is Valid:", res_good$ok))
+}
+}

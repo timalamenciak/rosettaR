@@ -4,11 +4,13 @@
 \name{apple_csv}
 \alias{apple_csv}
 \title{Apple Output Template Example
-This is an example of an output template that reformats the statement as a CSV.}
+This is an example of an output template that reformats the
+statement as a CSV.}
 \format{
 \subsection{\code{apple_csv}}{
 
-A string that contains Jinja syntax placeholders that match the \code{apple_template}.
+A string that contains Jinja syntax placeholders that match
+the \code{apple_template}.
 }
 }
 \usage{
@@ -16,7 +18,8 @@ apple_csv
 }
 \description{
 Apple Output Template Example
-This is an example of an output template that reformats the statement as a CSV.
+This is an example of an output template that reformats the
+statement as a CSV.
 }
 \references{
 \url{https://arxiv.org/pdf/2407.20007}

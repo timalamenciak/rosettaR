@@ -28,9 +28,9 @@ init_library <- function (file = NA) {
     # templateText
     # metaTemplateID (value not required)
 
-    req_n = c("TemplateID", "templateText", "metaTemplateID")
+    req_n <- c("TemplateID", "templateText", "metaTemplateID")
     #Verify that each required column is present
-    for (i in 1:length(req_n)) {
+    for (i in seq_len(length(req_n))) {
       if (!(req_n[i] %in% colnames(templates))){
         stop(paste0("Error: Required column ", req_n[i], " not found."))
       }

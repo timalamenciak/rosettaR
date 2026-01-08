@@ -1,5 +1,6 @@
 #' Apple Rosetta Statement Example
-#' This is an example of a template to describe the weight of a particular apple.
+#' This is an example of a template to describe the
+#' weight of a particular apple.
 #'
 #' @format ## `apple_template`
 #' A string with slots for an object, a quality, a measurement and a unit.
@@ -17,10 +18,12 @@
 "apple_statement"
 
 #' Apple Output Template Example
-#' This is an example of an output template that reformats the statement as a CSV.
+#' This is an example of an output template that reformats the
+#' statement as a CSV.
 #'
 #' @format ## `apple_csv`
-#' A string that contains Jinja syntax placeholders that match the `apple_template`.
+#' A string that contains Jinja syntax placeholders that match
+#' the `apple_template`.
 #'
 #' @references \url{https://arxiv.org/pdf/2407.20007}
 "apple_csv"

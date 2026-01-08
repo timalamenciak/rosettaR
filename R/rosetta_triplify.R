@@ -7,6 +7,12 @@
 #' @param templates A dataframe created by `init_library()`.
 #'
 #' @return A single character string containing the full RDF document.
+#' @examples
+#' \dontrun{
+#'   # (Use the same setup as above)
+#'   ttl <- rosetta_triplify(statements, templates)
+#'   cat(ttl)
+#' }
 #' @export
 rosetta_triplify <- function(statements, templates) {
 
@@ -34,7 +40,7 @@ rosetta_triplify <- function(statements, templates) {
     stmt <- statements[i]
 
     # Check match against templates
-    for (j in 1:nrow(templates)) {
+    for (j in seq_len(nrow(templates))) {
       tmpl_text <- templates$templateText[j]
 
       # Attempt Parse
