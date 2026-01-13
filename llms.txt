@@ -77,8 +77,6 @@ review](https://ropensci.org/software-review/).
   : Parse a Rosetta Statement
 - [`rosetta_match()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_match.md)
   : Match Multiple Statements Against a Template Library
-- [`rosetta_shiny()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_shiny.md)
-  : Rosetta Statements Shiny interface
 - [`rosetta_triplify()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_triplify.md)
   : Batch Convert Statements to RSO RDF
 - [`rosetta_validate()`](https://timalamenciak.github.io/rosettaR/reference/rosetta_validate.md)
