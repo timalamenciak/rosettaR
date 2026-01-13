@@ -30,9 +30,11 @@ test_that("rosetta_format handles nested optional blocks", {
 
   # 2. Nested Optional Blocks
   # Logic: An address might have a Unit, inside a Building, inside a Street.
-  # Template: "Address: [Unit {{ unit }} in [Building {{ building }} at]] {{ street }}"
+  # Template: "Address: [Unit {{ unit }} in [Building {{ building }} at]]
+  # {{ street }}"
 
-  tmpl <- "Address: [Unit {{ unit }} in [Building {{ building }} at]] {{ street }}"
+  tmpl <- "Address: [Unit {{ unit }} in [Building {{ building }} at]]
+  {{ street }}"
 
   # Case A: Full Depth (Unit + Building + Street)
   s1 <- "Address: Unit 4B in Building West at Main St"

@@ -14,21 +14,21 @@
 #' templates <- init_library()
 #'
 #' #Load a CSV library
-#' apple_templates <- init_library(system.file("extdata", "apple_templates.csv", package="rosettaR"))
+#' apple_templates <- init_library(system.file("extdata", "apple_templates.csv",
+#'  package="rosettaR"))
 init_library <- function (file = NA) {
-  if (missing(file)){
+  if (missing(file)) {
     return(data.frame(TemplateID = as.character(),
-                      templateText = as.character(),
-                      metaTemplateID = as.character()))
-  } else {
-    templates <- utils::read.csv(file)
+                      templateText = as.character()))
+    } else {
+      templates <- utils::read.csv(file)
     #Verify the format:
     #Required columns:
     # TemplateID
     # templateText
     # metaTemplateID (value not required)
 
-    req_n <- c("TemplateID", "templateText", "metaTemplateID")
+    req_n <- c("TemplateID", "templateText")
     #Verify that each required column is present
     for (i in seq_len(length(req_n))) {
       if (!(req_n[i] %in% colnames(templates))){

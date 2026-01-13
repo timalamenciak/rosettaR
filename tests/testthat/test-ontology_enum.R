@@ -1,5 +1,6 @@
 test_that("rosetta_validate enforces LinkML Enums (Ontology terms)", {
-  skip_if_not(reticulate::py_module_available("linkml"), "LinkML python library not installed")
+  skip_if_not(reticulate::py_module_available("linkml"),
+              "LinkML python library not installed")
 
   # 1. Define a Schema with an Enum (Controlled Vocabulary)
   # We define a 'CountryEnum' with 3 allowed values.

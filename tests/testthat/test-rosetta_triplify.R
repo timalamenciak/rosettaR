@@ -30,7 +30,8 @@ test_that("rosetta_triplify generates valid batch RDF", {
 
   # C. URIs should be distinct (Deterministic UUIDs)
   # We look for the pattern <urn:uuid:...>
-  uuids <- regmatches(ttl_output, gregexpr("urn:uuid:[a-f0-9-]+", ttl_output))[[1]]
+  uuids <- regmatches(ttl_output,
+                      gregexpr("urn:uuid:[a-f0-9-]+", ttl_output))[[1]]
 
   expect_equal(length(unique(uuids)), 2)
 })

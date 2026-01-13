@@ -16,7 +16,8 @@ A single character string containing the full RDF document.
 }
 \description{
 Converts a list of statements into a single, cohesive Turtle (TTL) string
-using the Rosetta Statement Ontology (RSO). Handles prefix management automatically.
+using the Rosetta Statement Ontology (RSO).
+Handles prefix management automatically.
 }
 \examples{
 \dontrun{

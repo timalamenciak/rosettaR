@@ -2,12 +2,14 @@
 .rosetta_bridge <- function() {
   # Ensure Python is initialized
   if (!reticulate::py_available(initialize = TRUE)) {
-    stop("Python is not available. Please install Python and the 'linkml' package.")
+    stop("Python is not available.
+         Please install Python and the 'linkml' package.")
   }
 
   # Check if linkml is installed
   if (!reticulate::py_module_available("linkml")) {
-    stop("The Python 'linkml' package is required. Please run `pip install linkml` in your Python environment.")
+    stop("The Python 'linkml' package is required.
+         Please run `pip install linkml` in your Python environment.")
   }
 
   # Load our internal script
@@ -54,7 +56,8 @@
 #' writeLines(schema_yaml, schema_file)# (Use the same setup as above)
 #'
 #' good_data <- data.frame(object = "Apple A", value = 150.5, unit = "g")
-#' res_good <- rosetta_validate(good_data, schema_file, target_class = "AppleObservation")
+#' res_good <- rosetta_validate(good_data, schema_file,
+#'   target_class = "AppleObservation")
 #' print(paste("Good Data is Valid:", res_good$ok))
 #' }
 #' @export

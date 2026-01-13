@@ -1,6 +1,8 @@
 test_that("rosetta_validate correctly validates data using Python bridge", {
-  # 1. Skip if Python/LinkML is missing (so it doesn't fail on machines without setup)
-  skip_if_not(reticulate::py_module_available("linkml"), "LinkML python library not installed")
+  # 1. Skip if Python/LinkML is missing
+  # (so it doesn't fail on machines without setup)
+  skip_if_not(reticulate::py_module_available("linkml"),
+              "LinkML python library not installed")
 
   # 2. Create a temporary schema for testing
   schema_content <- "

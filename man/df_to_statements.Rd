@@ -8,14 +8,15 @@ df_to_statements(df, templates)
 }
 \arguments{
 \item{df}{A data frame with headers that match the slots in a template. The
-dataframe must have one column called "TemplateID" that contains the ID of the
-template used to interpret the row.}
+dataframe must have one column called "TemplateID" that contains the ID
+of the template used to interpret the row.}
 
 \item{templates}{A Rosetta Statement template library created by the
 initLibrary function.}
 }
 \value{
-A data frame statement library containing the statements and associated templates.
+A data frame statement library containing the statements and
+associated templates.
 }
 \description{
 Change a data frame into a series of statements based on templates.

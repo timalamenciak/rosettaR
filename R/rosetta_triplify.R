@@ -1,7 +1,8 @@
 #' Batch Convert Statements to RSO RDF
 #'
 #' Converts a list of statements into a single, cohesive Turtle (TTL) string
-#' using the Rosetta Statement Ontology (RSO). Handles prefix management automatically.
+#' using the Rosetta Statement Ontology (RSO).
+#' Handles prefix management automatically.
 #'
 #' @param statements A character vector of plain language statements.
 #' @param templates A dataframe created by `init_library()`.
@@ -22,7 +23,8 @@ rosetta_triplify <- function(statements, templates) {
   }
   req_cols <- c("TemplateID", "templateText")
   if (!is.data.frame(templates) || !all(req_cols %in% names(templates))) {
-    stop("Error: 'templates' must be a dataframe with TemplateID and templateText.")
+    stop("Error: 'templates' must be a dataframe with
+         TemplateID and templateText.")
   }
 
   # 2. Define Standard Headers (RSO)

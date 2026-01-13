@@ -13,14 +13,16 @@ rosetta_shiny <- function() {
   ui <- bslib::page_navbar(
     title = "Rosetta Statements interface",
     theme = bslib::bs_theme(5, "flatly"),
-    navbar_options = bslib::navbar_options(class = "bg-primary", theme = "dark"),
+    navbar_options = bslib::navbar_options(class = "bg-primary",
+                                           theme = "dark"),
 
     bslib::nav_panel(
       title = "Engine",
       bslib::card(
         full_screen = FALSE,
         bslib::card_header("1. Upload Input Data"),
-        shiny::p("Upload either a Rosetta statement CSV (TemplateID + statementText)
+        shiny::p("Upload either a Rosetta statement CSV
+        (TemplateID + statementText)
        or a raw data-frame CSV (must include TemplateID)."),
         shiny::radioButtons(
           "engine_input_type",
@@ -39,18 +41,21 @@ rosetta_shiny <- function() {
         shiny::tabsetPanel(
           shiny::tabPanel(
             "Create Statements",
-            shiny::p("Convert a data frame into Rosetta Statements using the TemplateID column."),
+            shiny::p("Convert a data frame into Rosetta Statements using
+                     the TemplateID column."),
             shiny::actionButton(
               "convert_to_statements_btn",
               "Generate Statements",
               class = "btn btn-primary mt-2"
             ),
             DT::DTOutput("engine_statements_out"),
-            shiny::downloadButton("download_statements_btn", "Download Statements")
+            shiny::downloadButton("download_statements_btn",
+                                  "Download Statements")
           ),
           shiny::tabPanel(
             "Convert Statements (Jinja)",
-            shiny::p("Enter a Jinja template to convert statements into sentences, CSV rows, TTL triples, etc."),
+            shiny::p("Enter a Jinja template to convert statements into
+                     sentences, CSV rows, TTL triples, etc."),
             shiny::textAreaInput(
               "engine_output_template",
               "Jinja Output Template:",
@@ -63,7 +68,8 @@ rosetta_shiny <- function() {
               class = "btn btn-success mt-2"
             ),
             shiny::verbatimTextOutput("engine_converted_output"),
-            shiny::downloadButton("download_converted_output_btn", "Download Output")
+            shiny::downloadButton("download_converted_output_btn",
+                                  "Download Output")
           )
         )
       )
@@ -74,11 +80,15 @@ rosetta_shiny <- function() {
       DT::DTOutput("template_table"),
       bslib::card(
         bslib::card_header("Template creator"),
-        shiny::textAreaInput("template_text", "Template (Jinja syntax)", height = "200px"),
+        shiny::textAreaInput("template_text",
+                             "Template (Jinja syntax)", height = "200px"),
         shiny::uiOutput("template_variable_display"),
-        shiny::actionButton("add_template_btn", "Add / Update Template", class = "btn-primary"),
-        shiny::actionButton("delete_template_btn", "Delete Template", class = "btn-danger"),
-        shiny::fileInput("import_templates", "Import Template Library (.csv or .rds)"),
+        shiny::actionButton("add_template_btn",
+                            "Add / Update Template", class = "btn-primary"),
+        shiny::actionButton("delete_template_btn",
+                            "Delete Template", class = "btn-danger"),
+        shiny::fileInput("import_templates",
+                         "Import Template Library (.csv or .rds)"),
         shiny::downloadButton("export_templates", "Export Current Library")
       )
     )
@@ -102,7 +112,8 @@ rosetta_shiny <- function() {
     shiny::observeEvent(input$template_table_rows_selected, {
       row <- rv$templates[input$template_table_rows_selected, ]
       shiny::updateTextInput(session, "template_id", value = row$id)
-      shiny::updateTextAreaInput(session, "template_text", value = row$templateText)
+      shiny::updateTextAreaInput(session, "template_text",
+                                 value = row$templateText)
     })
 
     #output$template_variable_display <- renderUI({
@@ -124,27 +135,34 @@ rosetta_shiny <- function() {
 
     shiny::observeEvent(input$import_templates, {
       path <- input$import_templates$datapath
-      if (grepl("\\.csv$", path)) rv$templates <- utils::read.csv(path, stringsAsFactors = FALSE)
+      if (grepl("\\.csv$", path))
+        rv$templates <- utils::read.csv(path,stringsAsFactors = FALSE)
     })
 
     output$export_templates <- shiny::downloadHandler(
       filename = "template_library.csv",
-      content = function(file) utils::write.csv(rv$templates, file, row.names = FALSE)
+      content = function(file) utils::write.csv(rv$templates, file,
+                                                row.names = FALSE)
     )
 
     shiny::observeEvent(input$engine_input_file, {
       shiny::req(input$engine_input_file)
-      df <- utils::read.csv(input$engine_input_file$datapath, stringsAsFactors = FALSE)
+      df <- utils::read.csv(input$engine_input_file$datapath,
+                            stringsAsFactors = FALSE)
 
       if (input$engine_input_type == "statements") {
         shiny::validate(
-          shiny::need("TemplateID" %in% names(df), "File missing TemplateID column."),
-          shiny::need("statementText" %in% names(df), "File missing statementText column.")
+          shiny::need("TemplateID" %in% names(df),
+                      "File missing TemplateID column."),
+          shiny::need("statementText" %in% names(df),
+                      "File missing statementText column.")
         )
         rv$statements <- df
 
       } else if (input$engine_input_type == "dataframe") {
-        shiny::validate(shiny::need("TemplateID" %in% names(df), "Data frame must include a TemplateID column."))
+        shiny::validate(shiny::need("TemplateID" %in% names(df),
+                                    "Data frame must include
+                                    a TemplateID column."))
         rv$data_input <- df
       }
     })
@@ -158,12 +176,14 @@ rosetta_shiny <- function() {
     })
 
     output$engine_input_preview_table <- DT::renderDT({
-      if (input$engine_input_type == "statements") rv$statements else rv$data_input
+      if (input$engine_input_type == "statements") rv$statements
+      else rv$data_input
     })
 
     shiny::observeEvent(input$convert_to_statements_btn, {
       shiny::req(rv$data_input)
-      rv$statements <- rosettaR::df_to_statements(df = rv$data_input, library = rv$templates)
+      rv$statements <- rosettaR::df_to_statements(df = rv$data_input,
+                                                  library = rv$templates)
     })
 
     output$engine_statements_out <- DT::renderDT({
@@ -173,7 +193,8 @@ rosetta_shiny <- function() {
 
     output$download_statements_btn <- shiny::downloadHandler(
       filename = "rosetta_statements.csv",
-      content = function(file) utils::write.csv(rv$statements, file, row.names = FALSE)
+      content = function(file) utils::write.csv(rv$statements, file,
+                                                row.names = FALSE)
     )
 
     shiny::observeEvent(input$convert_statements_template_btn, {

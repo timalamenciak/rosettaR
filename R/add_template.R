@@ -10,9 +10,8 @@
 #' @examples
 #' templates <- init_library()
 #' templates <- add_template(templates, apple_template)
-add_template <- function(library, template, meta_id = NA) {
+add_template <- function(library, template) {
 library <- rbind(library, data.frame(TemplateID = nrow(library)+1,
-                                     templateText = template,
-                                     metaTemplateID = meta_id))
+                                     templateText = template))
 return(library)
 }

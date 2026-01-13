@@ -7,9 +7,17 @@
 run_rosetta_ui()
 }
 \value{
-A character string containing the processed text (if out_template is text),
+A character string containing the processed text
+(if out_template is text),
 or a dataframe (if out_template is "df").
 }
 \description{
-Opens a Shiny application to interactively test Rosetta templates and validation.
+Opens a Shiny application to interactively test Rosetta templates
+and validation.
+}
+\examples{
+\dontrun{
+run_rosetta_ui()
+}
+
 }

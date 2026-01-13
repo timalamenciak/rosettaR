@@ -42,7 +42,8 @@ schema_file <- tempfile(fileext = ".yaml")
 writeLines(schema_yaml, schema_file)# (Use the same setup as above)
 
 good_data <- data.frame(object = "Apple A", value = 150.5, unit = "g")
-res_good <- rosetta_validate(good_data, schema_file, target_class = "AppleObservation")
+res_good <- rosetta_validate(good_data, schema_file,
+  target_class = "AppleObservation")
 print(paste("Good Data is Valid:", res_good$ok))
 }
 }

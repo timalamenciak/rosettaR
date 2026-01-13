@@ -11,9 +11,20 @@ rosetta_format(s, in_template, out_template = "df")
 
 \item{in_template}{The Rosetta template string.}
 
-\item{out_template}{The output format ('df' for dataframe, 'rdf' for generic Turtle, or a Jinja string).}
+\item{out_template}{The output format ('df' for dataframe,
+'rdf' for generic Turtle, or a Jinja string).}
+}
+\value{
+Either a data frame or the out_template with values filled in from
+statement and in_template.
 }
 \description{
-Converts a plain language statement into a structured dataframe using a template.
-Supports variables {{ var }} and optional blocks \link{ ... }.
+Converts a plain language statement into a structured dataframe using
+a template.
+Supports variables \{\{ var \}\} and optional blocks \link{ ... }.
+}
+\examples{
+# example code
+rosetta_format("Apple X weighs 235 grams", "{{ fruit }} weighs {{ value }} {{ unit}}")
+
 }

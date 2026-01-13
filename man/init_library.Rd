@@ -24,5 +24,6 @@ Load a set of Rosetta templates into a dataframe.
 templates <- init_library()
 
 #Load a CSV library
-apple_templates <- init_library(system.file("extdata", "apple_templates.csv", package="rosettaR"))
+apple_templates <- init_library(system.file("extdata", "apple_templates.csv",
+ package="rosettaR"))
 }

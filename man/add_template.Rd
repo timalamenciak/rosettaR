@@ -4,7 +4,7 @@
 \alias{add_template}
 \title{Add a template string to the library}
 \usage{
-add_template(library, template, meta_id = NA)
+add_template(library, template)
 }
 \arguments{
 \item{library}{Input must be a library dataframe created by initLibrary()}

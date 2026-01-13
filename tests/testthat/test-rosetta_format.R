@@ -1,4 +1,5 @@
-test_that("rosetta_format parses a basic city/country statement correctly into a data frame", {
+test_that("rosetta_format parses a basic city/country statement correctly
+          into a data frame", {
   # 1. Setup the inputs
   statement <- "Kitchener is located in Canada"
   in_template <- "{{ city }} is located in {{ country }}"
@@ -17,7 +18,8 @@ test_that("rosetta_format parses a basic city/country statement correctly into a
   expect_equal(result[,2], "Canada")    # Checking the country column
 })
 
-test_that("rosetta_format fails gracefully when statement does not match template", {
+test_that("rosetta_format fails gracefully
+          when statement does not match template", {
   # 1. Setup inputs that clearly don't match
   statement <- "The apple is red"
   in_template <- "{{ city }} is located in {{ country }}"
@@ -40,4 +42,17 @@ test_that("rosetta_format handles special regex characters literals", {
   # 3. Expectation
   # It should extract "10.50" literally, treating $ and . as just text
   expect_equal(result[,1], "10.50")
+})
+
+test_that("rosetta_format handles units with and without spaces", {
+  # 1. Setup: two template-statement pairs.
+  template1 <- "The cow weighs {{ weight }}kg"
+  template2 <- "The cow weighs {{ weight }} kg"
+  statement1 <- "The cow weighs 500kg"
+  statement2 <- "The cow weighs 500 kg"
+
+  result1 <- rosetta_format(statement1, template1)
+  result2 <- rosetta_format(statement2, template2)
+  expect_equal(result1[,1], "500")
+  expect_equal(result2[,1], "500")
 })

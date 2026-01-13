@@ -7,13 +7,15 @@
 rosetta_match(statements, templates)
 }
 \arguments{
-\item{statements}{A character vector of plain language statements, OR a dataframe containing a column of statements.}
+\item{statements}{A character vector of plain language statements, OR a
+dataframe containing a column of statements.}
 
 \item{templates}{A dataframe created by \code{init_library()}, containing
 'TemplateID' and 'templateText' columns.}
 }
 \value{
-A data.frame in long format with columns: statement_id, statement_text, template_id, variable, value.
+A data.frame in long format with columns: statement_id,
+statement_text, template_id, variable, value.
 }
 \description{
 Iterates through a vector of statements and attempts to match them against
@@ -27,7 +29,8 @@ a library of templates. Returns a long-format dataframe.
    # Dataframe Input (e.g. from read.csv)
    # df <- read.csv("my_statements.csv")
 
-   templates <- init_library(system.file("extdata/apple_templates.csv", package="rosettaR"))
+   templates <- init_library(system.file("extdata/apple_templates.csv",
+    package="rosettaR"))
    results <- rosetta_match(statements, templates)
 }
 }

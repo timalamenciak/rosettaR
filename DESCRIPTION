@@ -32,7 +32,8 @@ Imports:
     reticulate,
     jsonlite,
     rlang,
-    digest
+    digest,
+    shinytest2
 Remotes:
   timalamenciak/linkmlR
 Depends: 
@@ -43,4 +44,5 @@ Suggests:
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 URL: https://timalamenciak.github.io/rosettaR/
+BugReports: https://github.com/timalamenciak/rosettaR/issues
 Config/testthat/edition: 3

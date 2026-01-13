@@ -3,11 +3,13 @@
 #' Iterates through a vector of statements and attempts to match them against
 #' a library of templates. Returns a long-format dataframe.
 #'
-#' @param statements A character vector of plain language statements, OR a dataframe containing a column of statements.
+#' @param statements A character vector of plain language statements, OR a
+#' dataframe containing a column of statements.
 #' @param templates A dataframe created by `init_library()`, containing
 #' 'TemplateID' and 'templateText' columns.
 #'
-#' @return A data.frame in long format with columns: statement_id, statement_text, template_id, variable, value.
+#' @return A data.frame in long format with columns: statement_id,
+#' statement_text, template_id, variable, value.
 #' @examples
 #' \dontrun{
 #'    # Vector Input
@@ -16,7 +18,8 @@
 #'    # Dataframe Input (e.g. from read.csv)
 #'    # df <- read.csv("my_statements.csv")
 #'
-#'    templates <- init_library(system.file("extdata/apple_templates.csv", package="rosettaR"))
+#'    templates <- init_library(system.file("extdata/apple_templates.csv",
+#'     package="rosettaR"))
 #'    results <- rosetta_match(statements, templates)
 #' }
 #' @export
@@ -25,15 +28,18 @@ rosetta_match <- function(statements, templates) {
   # 1. Validation: Templates
   req_cols <- c("TemplateID", "templateText")
   if (!is.data.frame(templates) || !all(req_cols %in% names(templates))) {
-    stop("Error: 'templates' must be a dataframe with 'TemplateID' and 'templateText' columns.")
+    stop("Error: 'templates' must be a dataframe with 'TemplateID' and
+         'templateText' columns.")
   }
 
   # 2. Input Normalization: Handle Dataframe vs Vector
-  # If the user passed a dataframe (like from read.csv), we need to extract the text vector.
+  # If the user passed a dataframe (like from read.csv),
+  # we need to extract the text vector.
   statements_vec <- NULL
 
   if (is.data.frame(statements)) {
-    # Heuristic: Look for a column named 'text' or 'statement' (case insensitive)
+    # Heuristic: Look for a column named 'text' or
+    # 'statement' (case insensitive)
     col_names <- tolower(names(statements))
     target_col <- match("text", col_names)
     if (is.na(target_col)) target_col <- match("statement", col_names)
@@ -46,12 +52,15 @@ rosetta_match <- function(statements, templates) {
       statements_vec <- as.character(statements[[1]])
     } else {
       # Fallback: Try to find the first character column
-      char_cols <- sapply(statements, is.character)
+      char_cols <- vapply(statements, is.character)
       if (any(char_cols)) {
         statements_vec <- statements[[which(char_cols)[1]]]
-        warning(paste("Dataframe passed to rosetta_match. Using column:", names(statements)[which(char_cols)[1]]))
+        warning(paste("Dataframe passed to rosetta_match. Using column:",
+                      names(statements)[which(char_cols)[1]]))
       } else {
-        stop("Error: 'statements' is a dataframe but I cannot determine which column contains the text. Please pass a vector or rename your column to 'text'.")
+        stop("Error: 'statements' is a dataframe but I cannot determine
+             which column contains the text. Please pass a vector or rename
+             your column to 'text'.")
       }
     }
   } else {
@@ -61,7 +70,9 @@ rosetta_match <- function(statements, templates) {
 
   # Safety check for that "String looks like code" bug
   if (length(statements_vec) == 1 && grepl("^c\\s*\\(", statements_vec)) {
-    warning("Input looks like an R code string (e.g. 'c(\"...\")') rather than a vector. Did you read a file incorrectly?")
+    warning("Input looks like an R code string
+            (e.g. 'c(\"...\")') rather than a vector.
+            Did you read a file incorrectly?")
   }
 
   results_list <- list()
@@ -100,7 +111,8 @@ rosetta_match <- function(statements, templates) {
       }, error = function(e) {
         # Ignore mismatches, warn on bugs
         if (!grepl("Input string does not match", e$message)) {
-          warning(paste("Statement", i, "template", tmpl_name, "error:", e$message))
+          warning(paste("Statement", i, "template", tmpl_name,
+                        "error:", e$message))
         }
       })
     }
