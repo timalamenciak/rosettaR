@@ -8,8 +8,8 @@
 #' @param templates A dataframe created by `init_library()`, containing
 #' 'TemplateID' and 'templateText' columns.
 #'
-#' @return A data.frame in long format with columns: statement_id,
-#' statement_text, template_id, variable, value.
+#' @return A data.frame in long format with columns: `statement_id`,
+#' `statement_text`, `template_id`, variable, value.
 #' @examples
 #' \dontrun{
 #'    # Vector Input

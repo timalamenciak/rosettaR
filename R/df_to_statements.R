@@ -23,7 +23,7 @@ df_to_statements <- function(df, templates) {
   #Verify that the templates DF is in fact a proper templates DF.
   if (!identical(colnames(templates),
                  c("TemplateID", "templateText"))){
-    stop(paste0("Template library format is incorrect. Did you create it with
+  stop(paste0("Template library format is incorrect. Did you create it with
                 rosettaR::initLibrary()?"))
   }
   df_names <- colnames(df)

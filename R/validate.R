@@ -28,7 +28,7 @@
 
 #' Validate a data frame against a LinkML schema
 #'
-#' @param data A data frame (e.g. from rosetta_format) or list.
+#' @param data A data frame (e.g. from `rosetta_format) or list.
 #' @param schema Path to the LinkML schema YAML file.
 #' @param target_class The class in the schema to validate against.
 #'

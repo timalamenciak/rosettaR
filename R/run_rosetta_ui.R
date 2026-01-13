@@ -5,8 +5,8 @@
 #'
 #' @export
 #' @return A character string containing the processed text
-#' (if out_template is text),
-#'   or a dataframe (if out_template is "df").
+#' (if `out_template` is text),
+#'   or a dataframe (if `out_template` is "df").
 #' @examples
 #' \dontrun{
 #' run_rosetta_ui()

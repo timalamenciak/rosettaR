@@ -5,11 +5,11 @@
 #' Supports variables \{\{ var \}\} and optional blocks \[ ... \].
 #'
 #' @param s The input statement string.
-#' @param in_template The Rosetta template string.
-#' @param out_template The output format ('df' for dataframe,
+#' @param `in_template` The Rosetta template string.
+#' @param `out_template` The output format ('df' for dataframe,
 #' 'rdf' for generic Turtle, or a Jinja string).
-#' @returns Either a data frame or the out_template with values filled in from
-#' statement and in_template.
+#' @returns Either a data frame or the output template with values filled in from
+#' statement and input template.
 #' @examples
 #' # example code
 #' rosetta_format("Apple X weighs 235 grams", "{{ fruit }} weighs {{ value }} {{ unit}}")
