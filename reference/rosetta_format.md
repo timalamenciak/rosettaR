@@ -1,7 +1,7 @@
 # Parse a Rosetta Statement
 
 Converts a plain language statement into a structured dataframe using a
-template. Supports variables {{ var }} and optional blocks ... .
+template. Supports variables {{ var }} and optional blocks \[ ... \].
 
 ## Usage
 

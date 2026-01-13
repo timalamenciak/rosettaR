@@ -18,10 +18,6 @@ add_template(library, template)
 
   This should be one string template.
 
-- meta_id:
-
-  It can have a meta-template ID.
-
 ## Value
 
 A new library data frame containing the template that was added.
