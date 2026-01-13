@@ -5,7 +5,7 @@ Add a template string to the library
 ## Usage
 
 ``` r
-add_template(library, template, meta_id = NA)
+add_template(library, template)
 ```
 
 ## Arguments

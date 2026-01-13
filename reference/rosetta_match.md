@@ -37,7 +37,8 @@ if (FALSE) { # \dontrun{
    # Dataframe Input (e.g. from read.csv)
    # df <- read.csv("my_statements.csv")
 
-   templates <- init_library(system.file("extdata/apple_templates.csv", package="rosettaR"))
+   templates <- init_library(system.file("extdata/apple_templates.csv",
+    package="rosettaR"))
    results <- rosetta_match(statements, templates)
 } # }
 ```

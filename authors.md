@@ -8,6 +8,9 @@
 
 ## Citation
 
+Source:
+[`DESCRIPTION`](https://github.com/timalamenciak/rosettaR/blob/master/DESCRIPTION)
+
 Alamenciak T, Al Mustafa T (2026). *rosettaR: Turn Plain Language
 Statements Into RDF, CSV, or Anything*. R package version 0.1.0,
 <https://timalamenciak.github.io/rosettaR/>.

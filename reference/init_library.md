@@ -29,5 +29,6 @@ for use with other functions.
 templates <- init_library()
 
 #Load a CSV library
-apple_templates <- init_library(system.file("extdata", "apple_templates.csv", package="rosettaR"))
+apple_templates <- init_library(system.file("extdata", "apple_templates.csv",
+ package="rosettaR"))
 ```

@@ -1,7 +1,7 @@
 # Parse a Rosetta Statement
 
 Converts a plain language statement into a structured dataframe using a
-template. Supports variables var and optional blocks ... .
+template. Supports variables {{ var }} and optional blocks ... .
 
 ## Usage
 
@@ -23,3 +23,17 @@ rosetta_format(s, in_template, out_template = "df")
 
   The output format ('df' for dataframe, 'rdf' for generic Turtle, or a
   Jinja string).
+
+## Value
+
+Either a data frame or the out_template with values filled in from
+statement and in_template.
+
+## Examples
+
+``` r
+# example code
+rosetta_format("Apple X weighs 235 grams", "{{ fruit }} weighs {{ value }} {{ unit}}")
+#>     fruit value  unit
+#> 1 Apple X   235 grams
+```

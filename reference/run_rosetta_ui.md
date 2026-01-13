@@ -13,3 +13,11 @@ run_rosetta_ui()
 
 A character string containing the processed text (if out_template is
 text), or a dataframe (if out_template is "df").
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+run_rosetta_ui()
+} # }
+```

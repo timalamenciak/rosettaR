@@ -41,6 +41,7 @@
 <li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
 </form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/timalamenciak/rosettaR/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
@@ -57,7 +58,7 @@
       <h1>Overview</h1>
             
       
-
+      <small class="dont-index">Source: <a href="https://github.com/timalamenciak/rosettaR/blob/master/vignettes/Overview.Rmd" class="external-link"><code>vignettes/Overview.Rmd</code></a></small>
       <div class="d-none name"><code>Overview.Rmd</code></div>
     </div>
 
@@ -129,8 +130,10 @@ complicated with it. Here we can transform the statement into a CSV,
 where the slots become column headers and the values go in the
 columns:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/rosetta_format.html">rosetta_format</a></span><span class="op">(</span><span class="va">apple_statement</span>, <span class="va">apple_template</span>, <span class="st">"Object,Quality,Value,Unit\n{{ object }},{{ quality }},{{ value }},{{ unit }}"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "Object,Quality,Value,Unit\nApple X,weight,241.68,grams"</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/rosetta_format.html">rosetta_format</a></span><span class="op">(</span><span class="va">apple_statement</span>, <span class="va">apple_template</span>, </span>
+<span>               <span class="st">"Object,Quality,Value,Unit\n</span></span>
+<span><span class="st">               {{ object }},{{ quality }},{{ value }},{{ unit }}"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "Object,Quality,Value,Unit\n\n               Apple X,weight,241.68,grams"</span></span></code></pre></div>
 <p>We’re still in pretty simple territory here, so let’s get a little
 more complex. The original idea behind Rosetta Statements was to make it
 easier to create knowledge graphs in RDF. So here is an example of an
@@ -264,7 +267,6 @@ properly formatted CSV)</p>
 <thead><tr class="header">
 <th align="left">TemplateID</th>
 <th align="left">templateText</th>
-<th align="left">metaTemplateID</th>
 </tr></thead>
 <tbody></tbody>
 </table>
@@ -272,7 +274,8 @@ properly formatted CSV)</p>
 example using the <code><a href="../reference/init_library.html">init_library()</a></code> function. This function
 verifies that the template file is formatted properly:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">templates</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/init_library.html">init_library</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_templates.csv"</span>, package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">templates</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/init_library.html">init_library</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_templates.csv"</span>, </span>
+<span>                                      package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span><span class="va">templates</span><span class="op">)</span></span></code></pre></div>
 <table class="table">
 <colgroup>
@@ -309,7 +312,8 @@ magical_effect }}</td>
 <p>Next, let’s load some statements. Note that these are just plain text
 strings:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">statements</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_statements.csv"</span>, package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">statements</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_statements.csv"</span>, </span>
+<span>                                   package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">statements</span><span class="op">)</span></span>
 <span><span class="co">#&gt;   TemplateID                                              statement</span></span>
 <span><span class="co">#&gt; 1          1                   Apple X has a weight of 2332.4 grams</span></span>
@@ -543,12 +547,16 @@ against this schema.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># 1. Good Data</span></span>
 <span><span class="va">good_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>object <span class="op">=</span> <span class="st">"Apple A"</span>, value <span class="op">=</span> <span class="fl">150.5</span>, unit <span class="op">=</span> <span class="st">"g"</span><span class="op">)</span></span>
-<span><span class="va">res_good</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rosetta_validate.html">rosetta_validate</a></span><span class="op">(</span><span class="va">good_data</span>, <span class="va">schema_file</span>, target_class <span class="op">=</span> <span class="st">"AppleObservation"</span><span class="op">)</span></span>
+<span><span class="va">res_good</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rosetta_validate.html">rosetta_validate</a></span><span class="op">(</span><span class="va">good_data</span>, </span>
+<span>                             <span class="va">schema_file</span>, </span>
+<span>                             target_class <span class="op">=</span> <span class="st">"AppleObservation"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"Good Data is Valid:"</span>, <span class="va">res_good</span><span class="op">$</span><span class="va">ok</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># 2. Bad Data (Value is a string 'Heavy', not a float)</span></span>
 <span><span class="va">bad_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>object <span class="op">=</span> <span class="st">"Apple B"</span>, value <span class="op">=</span> <span class="st">"Heavy"</span>, unit <span class="op">=</span> <span class="st">"g"</span><span class="op">)</span></span>
-<span><span class="va">res_bad</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rosetta_validate.html">rosetta_validate</a></span><span class="op">(</span><span class="va">bad_data</span>, <span class="va">schema_file</span>, target_class <span class="op">=</span> <span class="st">"AppleObservation"</span><span class="op">)</span></span>
+<span><span class="va">res_bad</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/rosetta_validate.html">rosetta_validate</a></span><span class="op">(</span><span class="va">bad_data</span>, </span>
+<span>                            <span class="va">schema_file</span>, </span>
+<span>                            target_class <span class="op">=</span> <span class="st">"AppleObservation"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"Bad Data is Valid:"</span>, <span class="va">res_bad</span><span class="op">$</span><span class="va">ok</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="va">res_bad</span><span class="op">$</span><span class="va">ok</span><span class="op">)</span> <span class="op">{</span></span>

@@ -24,6 +24,7 @@ a library of templates. Returns a long-format dataframe."></head><body>
   </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/timalamenciak/rosettaR/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul></div>
 
 
@@ -33,7 +34,7 @@ a library of templates. Returns a long-format dataframe."></head><body>
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Match Multiple Statements Against a Template Library</h1>
-
+      <small class="dont-index">Source: <a href="https://github.com/timalamenciak/rosettaR/blob/master/R/rosetta_match.R" class="external-link"><code>R/rosetta_match.R</code></a></small>
       <div class="d-none name"><code>rosetta_match.Rd</code></div>
     </div>
 
@@ -52,7 +53,8 @@ a library of templates. Returns a long-format dataframe.</p>
 
 
 <dl><dt id="arg-statements">statements<a class="anchor" aria-label="anchor" href="#arg-statements"></a></dt>
-<dd><p>A character vector of plain language statements, OR a dataframe containing a column of statements.</p></dd>
+<dd><p>A character vector of plain language statements, OR a
+dataframe containing a column of statements.</p></dd>
 
 
 <dt id="arg-templates">templates<a class="anchor" aria-label="anchor" href="#arg-templates"></a></dt>
@@ -62,7 +64,8 @@ a library of templates. Returns a long-format dataframe.</p>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A data.frame in long format with columns: statement_id, statement_text, template_id, variable, value.</p>
+    <p>A data.frame in long format with columns: statement_id,
+statement_text, template_id, variable, value.</p>
     </div>
 
     <div class="section level2">
@@ -74,7 +77,8 @@ a library of templates. Returns a long-format dataframe.</p>
 <span class="r-in"><span>   <span class="co"># Dataframe Input (e.g. from read.csv)</span></span></span>
 <span class="r-in"><span>   <span class="co"># df &lt;- read.csv("my_statements.csv")</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span>   <span class="va">templates</span> <span class="op">&lt;-</span> <span class="fu"><a href="init_library.html">init_library</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_templates.csv"</span>, package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>   <span class="va">templates</span> <span class="op">&lt;-</span> <span class="fu"><a href="init_library.html">init_library</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata/apple_templates.csv"</span>,</span></span>
+<span class="r-in"><span>    package<span class="op">=</span><span class="st">"rosettaR"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span>   <span class="va">results</span> <span class="op">&lt;-</span> <span class="fu">rosetta_match</span><span class="op">(</span><span class="va">statements</span>, <span class="va">templates</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>

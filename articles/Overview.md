@@ -66,8 +66,10 @@ with it. Here we can transform the statement into a CSV, where the slots
 become column headers and the values go in the columns:
 
 ``` r
-rosetta_format(apple_statement, apple_template, "Object,Quality,Value,Unit\n{{ object }},{{ quality }},{{ value }},{{ unit }}")
-#> [1] "Object,Quality,Value,Unit\nApple X,weight,241.68,grams"
+rosetta_format(apple_statement, apple_template, 
+               "Object,Quality,Value,Unit\n
+               {{ object }},{{ quality }},{{ value }},{{ unit }}")
+#> [1] "Object,Quality,Value,Unit\n\n               Apple X,weight,241.68,grams"
 ```
 
 We’re still in pretty simple territory here, so let’s get a little more
@@ -208,8 +210,8 @@ empty_lib <- init_library()
 knitr::kable(empty_lib)
 ```
 
-| TemplateID | templateText | metaTemplateID |
-|------------|--------------|----------------|
+| TemplateID | templateText |
+|------------|--------------|
 
 Now let’s load a real set of templates that we have included as an
 example using the
@@ -218,7 +220,8 @@ function. This function verifies that the template file is formatted
 properly:
 
 ``` r
-templates <- init_library(system.file("extdata/apple_templates.csv", package="rosettaR"))
+templates <- init_library(system.file("extdata/apple_templates.csv", 
+                                      package="rosettaR"))
 knitr::kable(templates)
 ```
 
@@ -232,7 +235,8 @@ Next, let’s load some statements. Note that these are just plain text
 strings:
 
 ``` r
-statements <- read.csv(system.file("extdata/apple_statements.csv", package="rosettaR"))
+statements <- read.csv(system.file("extdata/apple_statements.csv", 
+                                   package="rosettaR"))
 head(statements)
 #>   TemplateID                                              statement
 #> 1          1                   Apple X has a weight of 2332.4 grams
@@ -378,12 +382,16 @@ schema.
 ``` r
 # 1. Good Data
 good_data <- data.frame(object = "Apple A", value = 150.5, unit = "g")
-res_good <- rosetta_validate(good_data, schema_file, target_class = "AppleObservation")
+res_good <- rosetta_validate(good_data, 
+                             schema_file, 
+                             target_class = "AppleObservation")
 print(paste("Good Data is Valid:", res_good$ok))
 
 # 2. Bad Data (Value is a string 'Heavy', not a float)
 bad_data <- data.frame(object = "Apple B", value = "Heavy", unit = "g")
-res_bad <- rosetta_validate(bad_data, schema_file, target_class = "AppleObservation")
+res_bad <- rosetta_validate(bad_data, 
+                            schema_file, 
+                            target_class = "AppleObservation")
 
 print(paste("Bad Data is Valid:", res_bad$ok))
 if (!res_bad$ok) {

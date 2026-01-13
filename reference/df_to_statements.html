@@ -22,6 +22,7 @@
   </ul></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/timalamenciak/rosettaR/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul></div>
 
 
@@ -31,7 +32,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Change a data frame into a series of statements based on templates.</h1>
-
+      <small class="dont-index">Source: <a href="https://github.com/timalamenciak/rosettaR/blob/master/R/df_to_statements.R" class="external-link"><code>R/df_to_statements.R</code></a></small>
       <div class="d-none name"><code>df_to_statements.Rd</code></div>
     </div>
 
@@ -50,8 +51,8 @@
 
 <dl><dt id="arg-df">df<a class="anchor" aria-label="anchor" href="#arg-df"></a></dt>
 <dd><p>A data frame with headers that match the slots in a template. The
-dataframe must have one column called "TemplateID" that contains the ID of the
-template used to interpret the row.</p></dd>
+dataframe must have one column called "TemplateID" that contains the ID
+of the template used to interpret the row.</p></dd>
 
 
 <dt id="arg-templates">templates<a class="anchor" aria-label="anchor" href="#arg-templates"></a></dt>
@@ -61,7 +62,8 @@ initLibrary function.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A data frame statement library containing the statements and associated templates.</p>
+    <p>A data frame statement library containing the statements and
+associated templates.</p>
     </div>
 
     <div class="section level2">
