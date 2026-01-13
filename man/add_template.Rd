@@ -10,8 +10,6 @@ add_template(library, template)
 \item{library}{Input must be a library dataframe created by initLibrary()}
 
 \item{template}{This should be one string template.}
-
-\item{meta_id}{It can have a meta-template ID.}
 }
 \value{
 A new library data frame containing the template that was added.

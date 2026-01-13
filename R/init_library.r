@@ -1,7 +1,7 @@
 #' Load a set of Rosetta templates into a dataframe.
 #'
-#' @param file A CSV with the headers 'TemplateID', 'templateText' and
-#' 'metaTemplateID'. Headers are case-sensitive and required. Other functions
+#' @param file A CSV with the headers 'TemplateID' and 'templateText'.
+#' Headers are case-sensitive and required. Other functions
 #' like df_to_statements() and add_template() will expect a data frame in the
 #' format created by this function.
 #'

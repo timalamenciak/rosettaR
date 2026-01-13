@@ -2,7 +2,6 @@
 #'
 #' @param library Input must be a library dataframe created by initLibrary()
 #' @param template This should be one string template.
-#' @param meta_id It can have a meta-template ID.
 #'
 #' @returns A new library data frame containing the template that was added.
 #' @export

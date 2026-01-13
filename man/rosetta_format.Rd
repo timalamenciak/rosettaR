@@ -21,7 +21,7 @@ statement and in_template.
 \description{
 Converts a plain language statement into a structured dataframe using
 a template.
-Supports variables \{\{ var \}\} and optional blocks \link{ ... }.
+Supports variables \{\{ var \}\} and optional blocks [ ... ].
 }
 \examples{
 # example code

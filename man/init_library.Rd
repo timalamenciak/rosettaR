@@ -7,8 +7,8 @@
 init_library(file = NA)
 }
 \arguments{
-\item{file}{A CSV with the headers 'TemplateID', 'templateText' and
-'metaTemplateID'. Headers are case-sensitive and required. Other functions
+\item{file}{A CSV with the headers 'TemplateID' and 'templateText'.
+Headers are case-sensitive and required. Other functions
 like df_to_statements() and add_template() will expect a data frame in the
 format created by this function.}
 }
