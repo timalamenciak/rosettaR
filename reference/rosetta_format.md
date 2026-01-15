@@ -26,8 +26,8 @@ rosetta_format(s, in_template, out_template = "df")
 
 ## Value
 
-Either a data frame or the out_template with values filled in from
-statement and in_template.
+Either a data frame or the output template with values filled in from
+statement and input template.
 
 ## Examples
 

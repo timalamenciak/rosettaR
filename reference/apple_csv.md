@@ -11,10 +11,8 @@ apple_csv
 
 ## Format
 
-### `apple_csv`
-
-A string that contains Jinja syntax placeholders that match the
-`apple_template`.
+`apple_csv` A string that contains Jinja syntax placeholders that match
+the `apple_template`.
 
 ## References
 

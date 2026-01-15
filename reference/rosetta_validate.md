@@ -12,7 +12,7 @@ rosetta_validate(data, schema, target_class = NULL)
 
 - data:
 
-  A data frame (e.g. from rosetta_format) or list.
+  A data frame (e.g. from \`rosetta_format) or list.
 
 - schema:
 

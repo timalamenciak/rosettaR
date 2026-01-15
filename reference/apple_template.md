@@ -11,9 +11,8 @@ apple_template
 
 ## Format
 
-### `apple_template`
-
-A string with slots for an object, a quality, a measurement and a unit.
+`apple_template` A string with slots for an object, a quality, a
+measurement and a unit.
 
 ## References
 

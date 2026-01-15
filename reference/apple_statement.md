@@ -11,9 +11,8 @@ apple_statement
 
 ## Format
 
-### `apple_statement`
-
-A string that specifies an object, a quality, a measurement and a unit.
+`apple_statement` A string that specifies an object, a quality, a
+measurement and a unit.
 
 ## References
 

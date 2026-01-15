@@ -24,8 +24,8 @@ rosetta_match(statements, templates)
 
 ## Value
 
-A data.frame in long format with columns: statement_id, statement_text,
-template_id, variable, value.
+A data.frame in long format with columns: `statement_id`,
+`statement_text`, `template_id`, variable, value.
 
 ## Examples
 

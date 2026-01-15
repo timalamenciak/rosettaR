@@ -13,9 +13,11 @@ init_library(file = NA)
 - file:
 
   A CSV with the headers 'TemplateID' and 'templateText'. Headers are
-  case-sensitive and required. Other functions like df_to_statements()
-  and add_template() will expect a data frame in the format created by
-  this function.
+  case-sensitive and required. Other functions like
+  [`df_to_statements()`](https://timalamenciak.github.io/rosettaR/reference/df_to_statements.md)
+  and
+  [`add_template()`](https://timalamenciak.github.io/rosettaR/reference/add_template.md)
+  will expect a data frame in the format created by this function.
 
 ## Value
 
