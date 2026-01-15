@@ -7,11 +7,9 @@
 This is an example of an output template that reformats the
 statement as a CSV.}
 \format{
-\subsection{\code{apple_csv}}{
-
+\code{apple_csv}
 A string that contains Jinja syntax placeholders that match
 the \code{apple_template}.
-}
 }
 \usage{
 apple_csv

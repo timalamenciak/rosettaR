@@ -7,10 +7,8 @@
 This is an example of a template to describe the
 weight of a particular apple.}
 \format{
-\subsection{\code{apple_template}}{
-
+\code{apple_template}
 A string with slots for an object, a quality, a measurement and a unit.
-}
 }
 \usage{
 apple_template

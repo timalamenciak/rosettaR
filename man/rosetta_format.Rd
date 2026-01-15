@@ -15,8 +15,8 @@ rosetta_format(s, in_template, out_template = "df")
 'rdf' for generic Turtle, or a Jinja string).}
 }
 \value{
-Either a data frame or the out_template with values filled in from
-statement and in_template.
+Either a data frame or the output template with values filled in from
+statement and input template.
 }
 \description{
 Converts a plain language statement into a structured dataframe using

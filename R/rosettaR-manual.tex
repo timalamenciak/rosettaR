@@ -1,0 +1,432 @@
+\nonstopmode{}
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\makeatletter\@ifl@t@r\fmtversion{2018/04/01}{}{\usepackage[utf8]{inputenc}}\makeatother
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `rosettaR'}}
+\par\bigskip{\large \today}
+\end{center}
+\ifthenelse{\boolean{Rd@use@hyper}}{\hypersetup{pdftitle = {rosettaR: Turn Plain Language Statements Into RDF, CSV, or Anything}}}{}
+\ifthenelse{\boolean{Rd@use@hyper}}{\hypersetup{pdfauthor = {Tim Alamenciak; Tarek Al Mustafa}}}{}
+\begin{description}
+\raggedright{}
+\item[Type]\AsIs{Package}
+\item[Title]\AsIs{Turn Plain Language Statements Into RDF, CSV, or Anything}
+\item[Version]\AsIs{0.1.0}
+\item[Description]\AsIs{Core functions to work with Rosetta Statements, which use
+templates to convert plain language strings into RDF, CSV or other
+representations. This package is designed to make the creation of knowledge
+graphs easier.}
+\item[License]\AsIs{MIT + file LICENSE}
+\item[Encoding]\AsIs{UTF-8}
+\item[LazyData]\AsIs{true}
+\item[Roxygen]\AsIs{list(markdown = TRUE)}
+\item[RoxygenNote]\AsIs{7.3.3}
+\item[Imports]\AsIs{dplyr, jinjar, shiny, utils, reticulate, jsonlite, rlang,
+digest}
+\item[Depends]\AsIs{R (>= 3.5)}
+\item[Suggests]\AsIs{knitr, rmarkdown, testthat (>= 3.0.0), shinytest2}
+\item[VignetteBuilder]\AsIs{knitr}
+\item[URL]\AsIs{}\url{https://timalamenciak.github.io/rosettaR/}\AsIs{}
+\item[BugReports]\AsIs{}\url{https://github.com/timalamenciak/rosettaR/issues}\AsIs{}
+\item[Config/testthat/edition]\AsIs{3}
+\item[NeedsCompilation]\AsIs{no}
+\item[Author]\AsIs{Tim Alamenciak [aut, cre],
+Tarek Al Mustafa [aut]}
+\item[Maintainer]\AsIs{Tim Alamenciak }\email{tim.alamenciak@gmail.com}\AsIs{}
+\end{description}
+\Rdcontents{Contents}
+\HeaderA{add\_template}{Add a template string to the library}{add.Rul.template}
+%
+\begin{Description}
+Add a template string to the library
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+add_template(library, template)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{library}] Input must be a library dataframe created by initLibrary()
+
+\item[\code{template}] This should be one string template.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A new library data frame containing the template that was added.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+templates <- init_library()
+templates <- add_template(templates, apple_template)
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{apple\_csv}{Apple Output Template Example This is an example of an output template that reformats the statement as a CSV.}{apple.Rul.csv}
+\keyword{datasets}{apple\_csv}
+%
+\begin{Description}
+Apple Output Template Example
+This is an example of an output template that reformats the
+statement as a CSV.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+apple_csv
+\end{verbatim}
+\end{Usage}
+%
+\begin{Format}
+%
+\begin{SubSection}{\code{apple\_csv}}
+
+A string that contains Jinja syntax placeholders that match
+the \code{apple\_template}.
+\end{SubSection}
+
+\end{Format}
+%
+\begin{References}
+\url{https://arxiv.org/pdf/2407.20007}
+\end{References}
+\HeaderA{apple\_statement}{Apple Rosetta Statement Example This is an example of a statement that describes the weight of Apple X.}{apple.Rul.statement}
+\keyword{datasets}{apple\_statement}
+%
+\begin{Description}
+Apple Rosetta Statement Example
+This is an example of a statement that describes the weight of Apple X.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+apple_statement
+\end{verbatim}
+\end{Usage}
+%
+\begin{Format}
+%
+\begin{SubSection}{\code{apple\_statement}}
+
+A string that specifies an object, a quality, a measurement and a unit.
+\end{SubSection}
+
+\end{Format}
+%
+\begin{References}
+\url{https://arxiv.org/pdf/2407.20007}
+\end{References}
+\HeaderA{apple\_template}{Apple Rosetta Statement Example This is an example of a template to describe the weight of a particular apple.}{apple.Rul.template}
+\keyword{datasets}{apple\_template}
+%
+\begin{Description}
+Apple Rosetta Statement Example
+This is an example of a template to describe the
+weight of a particular apple.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+apple_template
+\end{verbatim}
+\end{Usage}
+%
+\begin{Format}
+%
+\begin{SubSection}{\code{apple\_template}}
+
+A string with slots for an object, a quality, a measurement and a unit.
+\end{SubSection}
+
+\end{Format}
+%
+\begin{References}
+\url{https://arxiv.org/pdf/2407.20007}
+\end{References}
+\HeaderA{df\_to\_statements}{Change a data frame into a series of statements based on templates.}{df.Rul.to.Rul.statements}
+%
+\begin{Description}
+Change a data frame into a series of statements based on templates.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+df_to_statements(df, templates)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{df}] A data frame with headers that match the slots in a template. The
+dataframe must have one column called "TemplateID" that contains the ID
+of the template used to interpret the row.
+
+\item[\code{templates}] A Rosetta Statement template library created by the
+initLibrary function.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A data frame statement library containing the statements and
+associated templates.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+templates <- init_library()
+templates <- add_template(templates, apple_template)
+df <- data.frame(object = "Apple X",
+                              quality = "weight", value="100.2",
+                             unit="grams", TemplateID = "1")
+statements <- df_to_statements(df,templates)
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{init\_library}{Load a set of Rosetta templates into a dataframe.}{init.Rul.library}
+%
+\begin{Description}
+Load a set of Rosetta templates into a dataframe.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+init_library(file = NA)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{file}] A CSV with the headers 'TemplateID' and 'templateText'.
+Headers are case-sensitive and required. Other functions
+like \code{df\_to\_statements()} and \code{add\_template()} will expect a data frame in the
+format created by this function.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A dataframe containing either the loaded templates or the proper
+headers for use with other functions.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+#Initialize an empty library
+templates <- init_library()
+
+#Load a CSV library
+apple_templates <- init_library(system.file("extdata", "apple_templates.csv",
+ package="rosettaR"))
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{rosetta\_format}{Parse a Rosetta Statement}{rosetta.Rul.format}
+%
+\begin{Description}
+Converts a plain language statement into a structured dataframe using
+a template.
+Supports variables \{\{ var \}\} and optional blocks [ ... ].
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+rosetta_format(s, in_template, out_template = "df")
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{s}] The input statement string.
+
+\item[\code{in\_template}] The Rosetta template string.
+
+\item[\code{out\_template}] The output format ('df' for dataframe,
+'rdf' for generic Turtle, or a Jinja string).
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+Either a data frame or the output template with values filled in from
+statement and input template.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+# example code
+rosetta_format("Apple X weighs 235 grams", "{{ fruit }} weighs {{ value }} {{ unit}}")
+
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{rosetta\_match}{Match Multiple Statements Against a Template Library}{rosetta.Rul.match}
+%
+\begin{Description}
+Iterates through a vector of statements and attempts to match them against
+a library of templates. Returns a long-format dataframe.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+rosetta_match(statements, templates)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{statements}] A character vector of plain language statements, OR a
+dataframe containing a column of statements.
+
+\item[\code{templates}] A dataframe created by \code{init\_library()}, containing
+'TemplateID' and 'templateText' columns.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A data.frame in long format with columns: \code{statement\_id},
+\code{statement\_text}, \code{template\_id}, variable, value.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+   # Vector Input
+   statements <- c("Kitchener is in Canada", "Paris is in France")
+
+   # Dataframe Input (e.g. from read.csv)
+   # df <- read.csv("my_statements.csv")
+
+   templates <- init_library(system.file("extdata/apple_templates.csv",
+    package="rosettaR"))
+   results <- rosetta_match(statements, templates)
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{rosetta\_triplify}{Batch Convert Statements to RSO RDF}{rosetta.Rul.triplify}
+%
+\begin{Description}
+Converts a list of statements into a single, cohesive Turtle (TTL) string
+using the Rosetta Statement Ontology (RSO).
+Handles prefix management automatically.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+rosetta_triplify(statements, templates)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{statements}] A character vector of plain language statements.
+
+\item[\code{templates}] A dataframe created by \code{init\_library()}.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A single character string containing the full RDF document.
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+  # (Use the same setup as above)
+  ttl <- rosetta_triplify(statements, templates)
+  cat(ttl)
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{rosetta\_validate}{Validate a data frame against a LinkML schema}{rosetta.Rul.validate}
+%
+\begin{Description}
+Validate a data frame against a LinkML schema
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+rosetta_validate(data, schema, target_class = NULL)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{data}] A data frame (e.g. from `rosetta\_format) or list.
+
+\item[\code{schema}] Path to the LinkML schema YAML file.
+
+\item[\code{target\_class}] The class in the schema to validate against.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A list containing \code{ok} (boolean) and \code{issues} (list of errors).
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+  # Create a YAML schema for this example.
+  schema_yaml <- "id: https://example.org/apple-schema
+  name: AppleSchema
+   imports:
+   - linkml:types
+   default_range: string
+ classes:
+   AppleObservation:
+    attributes:
+      object:
+        required: true
+      value:
+        range: float  # Value must be a number!
+      unit:
+        range: string"
+
+# Save to a temporary file for this example
+schema_file <- tempfile(fileext = ".yaml")
+writeLines(schema_yaml, schema_file)# (Use the same setup as above)
+
+good_data <- data.frame(object = "Apple A", value = 150.5, unit = "g")
+res_good <- rosetta_validate(good_data, schema_file,
+  target_class = "AppleObservation")
+print(paste("Good Data is Valid:", res_good$ok))
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\HeaderA{run\_rosetta\_ui}{Launch the RosettaR UI}{run.Rul.rosetta.Rul.ui}
+%
+\begin{Description}
+Opens a Shiny application to interactively test Rosetta templates
+and validation.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+run_rosetta_ui()
+\end{verbatim}
+\end{Usage}
+%
+\begin{Value}
+A character string containing the processed text
+(if \code{out\_template} is text),
+or a dataframe (if \code{out\_template} is "df").
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+run_rosetta_ui()
+
+## End(Not run)
+
+\end{ExampleCode}
+\end{Examples}
+\printindex{}
+\end{document}

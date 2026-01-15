@@ -14,8 +14,8 @@ dataframe containing a column of statements.}
 'TemplateID' and 'templateText' columns.}
 }
 \value{
-A data.frame in long format with columns: statement_id,
-statement_text, template_id, variable, value.
+A data.frame in long format with columns: \code{statement_id},
+\code{statement_text}, \code{template_id}, variable, value.
 }
 \description{
 Iterates through a vector of statements and attempts to match them against

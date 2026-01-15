@@ -8,8 +8,8 @@ run_rosetta_ui()
 }
 \value{
 A character string containing the processed text
-(if out_template is text),
-or a dataframe (if out_template is "df").
+(if \code{out_template} is text),
+or a dataframe (if \code{out_template} is "df").
 }
 \description{
 Opens a Shiny application to interactively test Rosetta templates

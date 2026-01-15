@@ -6,10 +6,8 @@
 \title{Apple Rosetta Statement Example
 This is an example of a statement that describes the weight of Apple X.}
 \format{
-\subsection{\code{apple_statement}}{
-
+\code{apple_statement}
 A string that specifies an object, a quality, a measurement and a unit.
-}
 }
 \usage{
 apple_statement

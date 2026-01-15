@@ -7,7 +7,7 @@
 rosetta_validate(data, schema, target_class = NULL)
 }
 \arguments{
-\item{data}{A data frame (e.g. from rosetta_format) or list.}
+\item{data}{A data frame (e.g. from `rosetta_format) or list.}
 
 \item{schema}{Path to the LinkML schema YAML file.}
 
